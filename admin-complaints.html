@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Manage support complaints submitted by KaiBandham members.">
+
+    <title>User Complaints | KaiBandham Admin</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= ADMIN NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container-fluid px-4">
+
+
+            <a class="navbar-brand"
+               href="admin-dashboard.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#adminNavbar"
+                aria-controls="adminNavbar"
+                aria-expanded="false"
+                aria-label="Open admin navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse"
+                 id="adminNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-dashboard.html">
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-users.html">
+
+                            Users
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-reports.html">
+
+                            Reports
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="admin-complaints.html">
+
+                            Complaints
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-content.html">
+
+                            Content
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a
+                            class="btn btn-outline-danger"
+                            href="login.html">
+
+                            Logout
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="admin-complaints-section py-5">
+
+            <div class="container-fluid px-4">
+
+
+                <!-- ================= HEADING ================= -->
+
+                <div class="d-flex
+                            justify-content-between
+                            align-items-center
+                            flex-wrap
+                            gap-3
+                            mb-4">
+
+                    <div>
+
+                        <h1>
+                            User Complaints
+                        </h1>
+
+                        <p class="text-muted mb-0">
+
+                            Review and respond to support requests
+                            submitted by KaiBandham members.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="admin-dashboard.html"
+                        class="btn btn-outline-secondary">
+
+                        ← Back to Dashboard
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- ================= INFORMATION ================= -->
+
+                <div class="alert alert-light border mb-4"
+                     role="note">
+
+                    <h2 class="h6 fw-bold">
+                        Support Complaints
+                    </h2>
+
+                    <p class="mb-0">
+
+                        Complaints are for account, profile,
+                        privacy, messaging and technical support.
+
+                        A complaint is different from a safety report.
+
+                        Serious concerns such as scams, harassment
+                        or fake profiles should be handled through
+                        Admin Reports.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= SUMMARY ================= -->
+
+                <div class="row g-4 mb-4">
+
+
+                    <!-- Pending -->
+
+                    <div class="col-md-4">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                📩
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Pending
+                                </span>
+
+                                <h2 id="pendingComplaintCount">
+                                    0
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Under Review -->
+
+                    <div class="col-md-4">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                🔎
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Under Review
+                                </span>
+
+                                <h2 id="reviewComplaintCount">
+                                    0
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Resolved -->
+
+                    <div class="col-md-4">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                ✅
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Resolved
+                                </span>
+
+                                <h2 id="resolvedComplaintCount">
+                                    0
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= FILTERS ================= -->
+
+                <div class="admin-card mb-4">
+
+                    <div class="row g-3">
+
+
+                        <!-- Search -->
+
+                        <div class="col-lg-4">
+
+                            <label
+                                for="complaintSearch"
+                                class="form-label">
+
+                                Search
+
+                            </label>
+
+                            <input
+                                type="search"
+                                id="complaintSearch"
+                                class="form-control"
+                                placeholder="Complaint ID or Profile ID">
+
+                        </div>
+
+
+
+                        <!-- Status -->
+
+                        <div class="col-lg-4">
+
+                            <label
+                                for="complaintStatus"
+                                class="form-label">
+
+                                Status
+
+                            </label>
+
+                            <select
+                                id="complaintStatus"
+                                class="form-select">
+
+                                <option value="all">
+                                    All Complaints
+                                </option>
+
+                                <option value="pending">
+                                    Pending
+                                </option>
+
+                                <option value="review">
+                                    Under Review
+                                </option>
+
+                                <option value="resolved">
+                                    Resolved
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- Category -->
+
+                        <div class="col-lg-4">
+
+                            <label
+                                for="complaintCategory"
+                                class="form-label">
+
+                                Category
+
+                            </label>
+
+                            <select
+                                id="complaintCategory"
+                                class="form-select">
+
+                                <option value="all">
+                                    All Categories
+                                </option>
+
+                                <option value="profile">
+                                    Profile
+                                </option>
+
+                                <option value="privacy">
+                                    Privacy
+                                </option>
+
+                                <option value="message">
+                                    Messages
+                                </option>
+
+                                <option value="interest">
+                                    Interests
+                                </option>
+
+                                <option value="whatsapp">
+                                    WhatsApp Contact
+                                </option>
+
+                                <option value="account">
+                                    Account
+                                </option>
+
+                                <option value="technical">
+                                    Technical Problem
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= COMPLAINT TABLE ================= -->
+
+                <div class="admin-card">
+
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Complaint ID
+                                    </th>
+
+                                    <th>
+                                        User
+                                    </th>
+
+                                    <th>
+                                        Category
+                                    </th>
+
+                                    <th>
+                                        Subject
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="complaintTableBody">
+
+
+
+                                <!-- ================= COMPLAINT 1 ================= -->
+
+                                <tr
+                                    data-complaint-row
+                                    data-complaint-id="CP0018"
+                                    data-profile-id="KB0041"
+                                    data-category="privacy"
+                                    data-status="pending">
+
+
+                                    <td>
+                                        CP0018
+                                    </td>
+
+
+                                    <td>
+
+                                        <strong>
+                                            KB0041
+                                        </strong>
+
+                                    </td>
+
+
+                                    <td>
+                                        Privacy
+                                    </td>
+
+
+                                    <td>
+                                        Profile photo privacy issue
+                                    </td>
+
+
+                                    <td>
+                                        8 Sep 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status pending">
+                                            Pending
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-brand btn-sm complaint-view-btn"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#complaintModal"
+                                            data-complaint-id="CP0018"
+                                            data-profile-id="KB0041"
+                                            data-member-name="Member Name"
+                                            data-category-label="Privacy"
+                                            data-subject="Profile photo privacy issue"
+                                            data-date="8 September 2026"
+                                            data-related-profile="KB0002"
+                                            data-reply-method="KaiBandham Notification"
+                                            data-message="I selected Accepted Interests Only for my profile photo, but another user could still see the photo before I accepted their interest.">
+
+                                            View
+
+                                        </button>
+
+                                    </td>
+
+
+                                </tr>
+
+
+
+                                <!-- ================= COMPLAINT 2 ================= -->
+
+                                <tr
+                                    data-complaint-row
+                                    data-complaint-id="CP0017"
+                                    data-profile-id="KB0033"
+                                    data-category="whatsapp"
+                                    data-status="review">
+
+
+                                    <td>
+                                        CP0017
+                                    </td>
+
+
+                                    <td>
+
+                                        <strong>
+                                            KB0033
+                                        </strong>
+
+                                    </td>
+
+
+                                    <td>
+                                        WhatsApp Contact
+                                    </td>
+
+
+                                    <td>
+                                        Cannot approve WhatsApp request
+                                    </td>
+
+
+                                    <td>
+                                        7 Sep 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status review">
+                                            Under Review
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-brand btn-sm complaint-view-btn"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#complaintModal"
+                                            data-complaint-id="CP0017"
+                                            data-profile-id="KB0033"
+                                            data-member-name="Member KB0033"
+                                            data-category-label="WhatsApp Contact"
+                                            data-subject="Cannot approve WhatsApp request"
+                                            data-date="7 September 2026"
+                                            data-related-profile="KB0015"
+                                            data-reply-method="KaiBandham Notification"
+                                            data-message="The conversation reached 15 messages. I received a WhatsApp request, but the Approve button is not working.">
+
+                                            Continue
+
+                                        </button>
+
+                                    </td>
+
+
+                                </tr>
+
+
+
+                                <!-- ================= COMPLAINT 3 ================= -->
+
+                                <tr
+                                    data-complaint-row
+                                    data-complaint-id="CP0016"
+                                    data-profile-id="KB0021"
+                                    data-category="message"
+                                    data-status="resolved">
+
+
+                                    <td>
+                                        CP0016
+                                    </td>
+
+
+                                    <td>
+
+                                        <strong>
+                                            KB0021
+                                        </strong>
+
+                                    </td>
+
+
+                                    <td>
+                                        Messages
+                                    </td>
+
+
+                                    <td>
+                                        Message counter problem
+                                    </td>
+
+
+                                    <td>
+                                        6 Sep 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status resolved">
+                                            Resolved
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-secondary btn-sm complaint-view-btn"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#complaintModal"
+                                            data-complaint-id="CP0016"
+                                            data-profile-id="KB0021"
+                                            data-member-name="Member KB0021"
+                                            data-category-label="Messages"
+                                            data-subject="Message counter problem"
+                                            data-date="6 September 2026"
+                                            data-related-profile="KB0008"
+                                            data-reply-method="Email"
+                                            data-message="My message counter did not update after sending a message.">
+
+                                            View
+
+                                        </button>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- No Results -->
+
+                    <div
+                        id="noComplaintsMessage"
+                        class="alert alert-light border d-none mt-3"
+                        role="status">
+
+                        No complaints match your search or filters.
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         COMPLAINT MODAL
+    =================================================== -->
+
+    <div
+        class="modal fade"
+        id="complaintModal"
+        tabindex="-1"
+        aria-labelledby="complaintModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+
+            <div class="modal-content">
+
+
+                <!-- ================= HEADER ================= -->
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title fs-5"
+                        id="complaintModalLabel">
+
+                        Complaint
+
+                    </h2>
+
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+
+                <!-- ================= BODY ================= -->
+
+                <div class="modal-body">
+
+
+                    <!-- Complaint Information -->
+
+                    <div class="complaint-detail-box mb-4">
+
+                        <h3>
+                            Complaint Information
+                        </h3>
+
+
+                        <div class="row">
+
+
+                            <div class="col-md-6 complaint-info">
+
+                                <span>
+                                    Complaint ID
+                                </span>
+
+                                <strong id="modalComplaintId">
+                                    CP0018
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 complaint-info">
+
+                                <span>
+                                    Submitted By
+                                </span>
+
+                                <strong id="modalComplaintProfile">
+                                    KB0041
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 complaint-info">
+
+                                <span>
+                                    Category
+                                </span>
+
+                                <strong id="modalComplaintCategory">
+                                    Privacy
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 complaint-info">
+
+                                <span>
+                                    Date
+                                </span>
+
+                                <strong id="modalComplaintDate">
+                                    8 September 2026
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 complaint-info">
+
+                                <span>
+                                    Related Profile ID
+                                </span>
+
+                                <strong id="modalRelatedProfile">
+                                    KB0002
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 complaint-info">
+
+                                <span>
+                                    Preferred Reply Method
+                                </span>
+
+                                <strong id="modalReplyMethod">
+                                    KaiBandham Notification
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 complaint-info">
+
+                                <span>
+                                    Current Status
+                                </span>
+
+                                <span
+                                    id="modalComplaintStatus"
+                                    class="admin-status pending">
+
+                                    Pending
+
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= SUBJECT ================= -->
+
+                    <div class="complaint-detail-box mb-4">
+
+                        <h3>
+                            Subject
+                        </h3>
+
+                        <p
+                            class="mb-0"
+                            id="modalComplaintSubject">
+
+                            Profile photo privacy issue
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================= USER MESSAGE ================= -->
+
+                    <div class="complaint-detail-box mb-4">
+
+                        <h3>
+                            User Message
+                        </h3>
+
+                        <p
+                            class="mb-0"
+                            id="modalComplaintMessage">
+
+                            Complaint message.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================= USER ACCOUNT ================= -->
+
+                    <div class="complaint-detail-box mb-4">
+
+                        <h3>
+                            User Account
+                        </h3>
+
+
+                        <div class="d-flex
+                                    align-items-center
+                                    gap-3
+                                    flex-wrap">
+
+
+                            <img
+                                src="images/profile-placeholder.png"
+                                alt=""
+                                class="admin-user-photo">
+
+
+                            <div>
+
+                                <strong
+                                    class="d-block"
+                                    id="modalComplaintMemberName">
+
+                                    Member Name
+
+                                </strong>
+
+
+                                <span
+                                    class="text-muted d-block"
+                                    id="modalComplaintMemberId">
+
+                                    Profile ID: KB0041
+
+                                </span>
+
+
+                                <a
+                                    href="view-profile.html"
+                                    class="btn btn-outline-brand btn-sm mt-2">
+
+                                    View Profile
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= STATUS ================= -->
+
+                    <div class="mb-4">
+
+                        <label
+                            for="complaintUpdateStatus"
+                            class="form-label">
+
+                            Update Status
+
+                        </label>
+
+
+                        <select
+                            id="complaintUpdateStatus"
+                            class="form-select">
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="review">
+                                Under Review
+                            </option>
+
+                            <option value="resolved">
+                                Resolved
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ================= ADMIN NOTES ================= -->
+
+                    <div class="mb-4">
+
+                        <label
+                            for="complaintAdminNotes"
+                            class="form-label">
+
+                            Admin Notes
+                        </label>
+
+
+                        <textarea
+                            id="complaintAdminNotes"
+                            class="form-control"
+                            rows="4"
+                            maxlength="1000"
+                            placeholder="Add internal notes about this complaint..."></textarea>
+
+
+                        <div class="form-text">
+
+                            These notes are for KaiBandham
+                            administrators.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= RESPONSE ================= -->
+
+                    <div class="mb-4">
+
+                        <label
+                            for="complaintResponse"
+                            class="form-label">
+
+                            Response to User
+
+                        </label>
+
+
+                        <textarea
+                            id="complaintResponse"
+                            class="form-control"
+                            rows="5"
+                            maxlength="1500"
+                            placeholder="Write a text response to the member..."></textarea>
+
+
+                        <div class="form-text">
+
+                            Keep the response clear and text-based.
+                            Later Django can deliver it using the
+                            member's preferred reply method.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= ACTION MESSAGE ================= -->
+
+                    <div
+                        id="complaintActionMessage"
+                        class="alert d-none mb-0"
+                        role="status">
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= FOOTER ================= -->
+
+                <div class="modal-footer">
+
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Close
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-brand"
+                        id="saveComplaintBtn">
+
+                        Save Update
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-brand"
+                        id="sendComplaintResponseBtn">
+
+                        Send Response
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+                KaiBandham Admin
+            </p>
+
+            <p class="mb-0">
+                &copy; 2026 KaiBandham. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

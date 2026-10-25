@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="View and manage your KaiBandham matrimony profile.">
+
+    <title>My Profile | KaiBandham</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#profileNavbar"
+                aria-controls="profileNavbar"
+                aria-expanded="false"
+                aria-label="Open navigation menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- Logged-in Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="profileNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <!-- Search -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="search.html">
+
+                            Search Profiles
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Interests -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="interests.html">
+
+                            Interests
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Messages -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="messages.html">
+
+                            Messages
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Notifications -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link position-relative"
+                            href="notifications.html">
+
+                            Notifications
+
+                            <span class="notification-count">
+                                4
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Saved -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="saved-profiles.html">
+
+                            Saved
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Settings -->
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="account-settings.html">
+
+                            Settings
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- My Profile -->
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a
+                            class="btn btn-brand"
+                            href="profile.html"
+                            aria-current="page">
+
+                            My Profile
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="profile-page-section py-5">
+
+            <div class="container">
+
+
+                <!-- My Profile Information -->
+
+                <div
+                    class="alert alert-light border mb-4"
+                    role="note">
+
+                    <strong>
+                        My Profile:
+                    </strong>
+
+                    This page shows your own profile,
+                    including private contact information.
+
+                    What other members can see depends
+                    on your Privacy Settings.
+
+                </div>
+
+
+
+                <div class="row g-4">
+
+
+                    <!-- ==================================================
+                         LEFT PROFILE CARD
+                    =================================================== -->
+
+                    <div class="col-lg-4">
+
+
+                        <div class="profile-summary-card text-center">
+
+
+                            <!-- Photo -->
+
+                            <div class="profile-photo-wrapper">
+
+                                <img
+                                    src="images/profile-placeholder.png"
+                                    alt="Your KaiBandham profile photo"
+                                    class="profile-photo">
+
+                            </div>
+
+
+
+                            <!-- Name -->
+
+                            <h1 class="profile-name mt-3">
+                                Your Name
+                            </h1>
+
+
+
+                            <!-- Profile ID -->
+
+                            <p class="profile-id">
+                                Profile ID: KB0001
+                            </p>
+
+
+
+                            <!-- Status -->
+
+                            <a
+                                href="profile-status.html"
+                                class="text-decoration-none">
+
+                                <span class="badge profile-status-badge">
+
+                                    ✅ Approved Profile
+
+                                </span>
+
+                            </a>
+
+
+                            <hr>
+
+
+
+                            <!-- Summary -->
+
+                            <p class="mb-1">
+
+                                <strong>
+                                    Age:
+                                </strong>
+
+                                28
+
+                            </p>
+
+
+                            <p class="mb-1">
+
+                                <strong>
+                                    Location:
+                                </strong>
+
+                                Kochi, Ernakulam
+
+                            </p>
+
+
+                            <p class="mb-1">
+
+                                <strong>
+                                    Occupation:
+                                </strong>
+
+                                Accountant
+
+                            </p>
+
+
+                            <p class="mb-0">
+
+                                <strong>
+                                    Communication Method:
+                                </strong>
+
+                                Indian Sign Language (ISL)
+
+                            </p>
+
+
+
+                            <!-- Actions -->
+
+                            <div class="d-grid gap-2 mt-4">
+
+
+                                <a
+                                    href="profile-create.html"
+                                    class="btn btn-brand">
+
+                                    Edit Profile
+
+                                </a>
+
+
+                                <a
+                                    href="profile-status.html"
+                                    class="btn btn-outline-brand">
+
+                                    Profile Status
+
+                                </a>
+
+
+                                <a
+                                    href="privacy.html"
+                                    class="btn btn-outline-brand">
+
+                                    Privacy Settings
+
+                                </a>
+
+
+                                <a
+                                    href="account-settings.html"
+                                    class="btn btn-outline-secondary">
+
+                                    Account Settings
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         RIGHT DETAILS
+                    =================================================== -->
+
+                    <div class="col-lg-8">
+
+
+
+                        <!-- ================= PERSONAL ================= -->
+
+                        <div class="profile-detail-card mb-4">
+
+                            <h2>
+                                Personal Information
+                            </h2>
+
+
+                            <div class="row">
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Full Name
+                                    </span>
+
+                                    <strong>
+                                        Your Name
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Date of Birth
+                                    </span>
+
+                                    <strong>
+                                        10 January 1998
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Age
+                                    </span>
+
+                                    <strong>
+                                        28 Years
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Gender
+                                    </span>
+
+                                    <strong>
+                                        Male
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Religion
+                                    </span>
+
+                                    <strong>
+                                        Christian
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Marital Status
+                                    </span>
+
+                                    <strong>
+                                        Never Married
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================= CONTACT ================= -->
+
+                        <div class="profile-detail-card mb-4">
+
+                            <h2>
+                                My Contact Information
+                            </h2>
+
+
+                            <p class="text-muted">
+
+                                These details are visible to you.
+                                Other members only see information
+                                allowed by your Privacy Settings.
+
+                            </p>
+
+
+                            <div class="row">
+
+
+                                <!-- Personal WhatsApp -->
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Personal WhatsApp Number
+                                    </span>
+
+                                    <strong>
+                                        +91 98765 43210
+                                    </strong>
+
+                                    <small class="text-muted">
+
+                                        Private unless you approve
+                                        a WhatsApp request.
+
+                                    </small>
+
+                                </div>
+
+
+
+                                <!-- Personal Method -->
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Personal Contact Method
+                                    </span>
+
+                                    <strong>
+                                        WhatsApp Text
+                                    </strong>
+
+                                </div>
+
+
+
+                                <!-- Email -->
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Email Address
+                                    </span>
+
+                                    <strong>
+                                        example@email.com
+                                    </strong>
+
+                                    <small class="text-muted">
+
+                                        Hidden from other members
+                                        by default.
+
+                                    </small>
+
+                                </div>
+
+
+
+                                <!-- Family Name -->
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Family Contact Name
+                                    </span>
+
+                                    <strong>
+                                        Abdul Rahman
+                                    </strong>
+
+                                </div>
+
+
+
+                                <!-- Relationship -->
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Relationship
+                                    </span>
+
+                                    <strong>
+                                        Father
+                                    </strong>
+
+                                </div>
+
+
+
+                                <!-- Family Number -->
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Family Contact Number
+                                    </span>
+
+                                    <strong>
+                                        +91 98765 12345
+                                    </strong>
+
+                                </div>
+
+
+
+                                <!-- Family Method -->
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Family Contact Method
+                                    </span>
+
+                                    <strong>
+                                        Voice Call
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================= LOCATION ================= -->
+
+                        <div class="profile-detail-card mb-4">
+
+                            <h2>
+                                Location
+                            </h2>
+
+
+                            <div class="row">
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        District
+                                    </span>
+
+                                    <strong>
+                                        Ernakulam
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Town / City
+                                    </span>
+
+                                    <strong>
+                                        Kochi
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================= EDUCATION ================= -->
+
+                        <div class="profile-detail-card mb-4">
+
+                            <h2>
+                                Education &amp; Occupation
+                            </h2>
+
+
+                            <div class="row">
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Education
+                                    </span>
+
+                                    <strong>
+                                        B.Com
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Occupation
+                                    </span>
+
+                                    <strong>
+                                        Accountant
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================= COMMUNICATION ================= -->
+
+                        <div class="profile-detail-card mb-4">
+
+                            <h2>
+                                Communication
+                            </h2>
+
+
+                            <div class="row">
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Communication Method
+                                    </span>
+
+                                    <strong>
+                                        Indian Sign Language (ISL)
+                                    </strong>
+
+
+                                    <small class="text-muted">
+
+                                        How you normally communicate.
+
+                                    </small>
+
+                                </div>
+
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Preferred Communication
+                                    </span>
+
+                                    <strong>
+                                        Text Chat
+                                    </strong>
+
+
+                                    <small class="text-muted">
+
+                                        How you prefer KaiBandham
+                                        members to contact you.
+
+                                    </small>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ================= ABOUT ================= -->
+
+                        <div class="profile-detail-card mb-4">
+
+                            <h2>
+                                About Me
+                            </h2>
+
+
+                            <p class="mb-0">
+
+                                I am a friendly and responsible person.
+                                I value family, respect and honesty.
+                                I am looking for a suitable life partner
+                                who understands and supports me.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- ================= PARTNER PREFERENCE ================= -->
+
+                        <div class="profile-detail-card mb-4">
+
+                            <h2>
+                                Partner Preference
+                            </h2>
+
+
+                            <div class="row">
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Preferred Age
+                                    </span>
+
+                                    <strong>
+                                        24 - 30 Years
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="col-md-6 profile-info">
+
+                                    <span>
+                                        Preferred Location
+                                    </span>
+
+                                    <strong>
+                                        Kerala
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="profile-info mt-3">
+
+                                <span>
+                                    Looking For
+                                </span>
+
+                                <strong>
+
+                                    A caring, understanding and
+                                    family-oriented life partner.
+
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================= PROFILE APPROVAL ================= -->
+
+                        <div class="profile-detail-card mb-4">
+
+                            <h2>
+                                Profile Status
+                            </h2>
+
+
+                            <div class="privacy-status">
+
+                                <div>
+                                    Current Status
+                                </div>
+
+                                <strong>
+                                    ✅ Approved
+                                </strong>
+
+                            </div>
+
+
+                            <p class="text-muted mt-3 mb-3">
+
+                                Your matrimony profile has been reviewed
+                                and approved by KaiBandham.
+
+                            </p>
+
+
+                            <a
+                                href="profile-status.html"
+                                class="btn btn-outline-brand">
+
+                                View Profile Status
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- ================= PRIVACY ================= -->
+
+                        <div class="profile-detail-card">
+
+                            <h2>
+                                Privacy Settings Summary
+                            </h2>
+
+
+                            <p class="text-muted">
+
+                                These settings control what other
+                                KaiBandham members can access.
+
+                            </p>
+
+
+
+                            <!-- WhatsApp -->
+
+                            <div class="privacy-status">
+
+                                <div>
+                                    Personal WhatsApp
+                                </div>
+
+                                <strong>
+                                    Hidden — Share Only After Approval
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- Family -->
+
+                            <div class="privacy-status">
+
+                                <div>
+                                    Family Contact Number
+                                </div>
+
+                                <strong>
+                                    Logged-in KaiBandham Members
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- Email -->
+
+                            <div class="privacy-status">
+
+                                <div>
+                                    Email Address
+                                </div>
+
+                                <strong>
+                                    Hidden
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- Photo -->
+
+                            <div class="privacy-status">
+
+                                <div>
+                                    Profile Photo
+                                </div>
+
+                                <strong>
+                                    Accepted Interests Only
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- Messages -->
+
+                            <div class="privacy-status">
+
+                                <div>
+                                    Messages
+                                </div>
+
+                                <strong>
+                                    Allowed
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- WhatsApp Requests -->
+
+                            <div class="privacy-status">
+
+                                <div>
+                                    WhatsApp Requests
+                                </div>
+
+                                <strong>
+                                    Allowed
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- Visibility -->
+
+                            <div class="privacy-status">
+
+                                <div>
+                                    Profile Visibility
+                                </div>
+
+                                <strong>
+                                    Visible
+                                </strong>
+
+                            </div>
+
+
+
+                            <div
+                                class="alert alert-light border mt-3 mb-3"
+                                role="note">
+
+                                Personal WhatsApp is never
+                                automatically revealed.
+
+                                After an accepted interest reaches
+                                15 total chat messages, the other
+                                member may request your WhatsApp.
+
+                                Your number is shown only after
+                                you approve that request.
+
+                            </div>
+
+
+
+                            <a
+                                href="privacy.html"
+                                class="btn btn-outline-brand">
+
+                                Manage Privacy
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+
+                KaiBandham — Accessible Matrimony for the Deaf Community in Kerala
+
+            </p>
+
+            <p class="mb-0">
+
+                &copy; 2026 KaiBandham.
+                All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Shared JavaScript -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

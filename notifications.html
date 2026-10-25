@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="View your KaiBandham notifications.">
+
+    <title>Notifications | KaiBandham</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Open navigation menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- Logged-in Navigation -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="search.html">
+
+                            Search Profiles
+
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="interests.html">
+
+                            Interests
+
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="messages.html">
+
+                            Messages
+
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active position-relative"
+                            href="notifications.html"
+                            aria-current="page">
+
+                            Notifications
+
+                            <span class="notification-count">
+                                4
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="saved-profiles.html">
+
+                            Saved
+
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="account-settings.html">
+
+                            Settings
+
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a
+                            class="btn btn-outline-brand"
+                            href="profile.html">
+
+                            My Profile
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="notifications-section py-5">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-9">
+
+
+                        <!-- ================= HEADER ================= -->
+
+                        <div
+                            class="d-flex
+                                   justify-content-between
+                                   align-items-center
+                                   flex-wrap
+                                   gap-3
+                                   mb-4">
+
+
+                            <div>
+
+                                <h1>
+                                    Notifications
+                                </h1>
+
+
+                                <p class="text-muted mb-0">
+
+                                    Keep track of interests, messages,
+                                    WhatsApp requests, profile updates
+                                    and safety updates.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <button
+                                type="button"
+                                class="btn btn-outline-brand"
+                                id="markAllReadBtn">
+
+                                Mark All as Read
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <!-- ================= FILTERS ================= -->
+
+                        <div class="notification-filter mb-4">
+
+
+                            <button
+                                type="button"
+                                class="notification-filter-btn active"
+                                data-filter="all">
+
+                                All
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="notification-filter-btn"
+                                data-filter="interest">
+
+                                Interests
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="notification-filter-btn"
+                                data-filter="message">
+
+                                Messages
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="notification-filter-btn"
+                                data-filter="contact">
+
+                                Contacts
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="notification-filter-btn"
+                                data-filter="account">
+
+                                Account
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="notification-filter-btn"
+                                data-filter="safety">
+
+                                Safety
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <!-- ================= NOTIFICATIONS ================= -->
+
+                        <div id="notificationList">
+
+
+
+                            <!-- ==================================================
+                                 NEW INTEREST
+                            =================================================== -->
+
+                            <article
+                                class="notification-card unread"
+                                data-type="interest">
+
+
+                                <div class="notification-icon">
+                                    ❤️
+                                </div>
+
+
+                                <div class="notification-content">
+
+
+                                    <div
+                                        class="d-flex
+                                               justify-content-between
+                                               gap-3">
+
+
+                                        <div>
+
+                                            <h2>
+                                                New Interest Received
+                                            </h2>
+
+
+                                            <p>
+
+                                                Anjali from Ernakulam
+                                                sent you a marriage interest.
+
+                                            </p>
+
+                                        </div>
+
+
+                                        <span
+                                            class="unread-dot"
+                                            aria-label="Unread notification">
+                                        </span>
+
+
+                                    </div>
+
+
+                                    <span class="notification-time">
+
+                                        Today, 10:30 AM
+
+                                    </span>
+
+
+                                    <div class="mt-3">
+
+                                        <a
+                                            href="interests.html"
+                                            class="btn btn-brand btn-sm">
+
+                                            View Interest
+
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 INTEREST ACCEPTED
+                            =================================================== -->
+
+                            <article
+                                class="notification-card unread"
+                                data-type="interest">
+
+
+                                <div class="notification-icon">
+                                    ✅
+                                </div>
+
+
+                                <div class="notification-content">
+
+
+                                    <div
+                                        class="d-flex
+                                               justify-content-between
+                                               gap-3">
+
+
+                                        <div>
+
+                                            <h2>
+                                                Interest Accepted
+                                            </h2>
+
+
+                                            <p>
+
+                                                Your interest has been accepted.
+
+                                                You can now use KaiBandham
+                                                Text Chat with this member.
+
+                                            </p>
+
+                                        </div>
+
+
+                                        <span class="unread-dot"></span>
+
+
+                                    </div>
+
+
+                                    <span class="notification-time">
+
+                                        Today, 9:15 AM
+
+                                    </span>
+
+
+                                    <div class="mt-3">
+
+                                        <a
+                                            href="messages.html?profile=KB0002"
+                                            class="btn btn-brand btn-sm">
+
+                                            Open Messages
+
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 INTEREST DECLINED
+                            =================================================== -->
+
+                            <article
+                                class="notification-card"
+                                data-type="interest">
+
+
+                                <div class="notification-icon">
+                                    ℹ️
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h2>
+                                        Interest Declined
+                                    </h2>
+
+
+                                    <p>
+
+                                        A member declined your marriage interest.
+
+                                        This does not block, report or
+                                        affect your KaiBandham account.
+
+                                    </p>
+
+
+                                    <span class="notification-time">
+
+                                        12 September 2026
+
+                                    </span>
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 NEW MESSAGE
+                            =================================================== -->
+
+                            <article
+                                class="notification-card unread"
+                                data-type="message">
+
+
+                                <div class="notification-icon">
+                                    💬
+                                </div>
+
+
+                                <div class="notification-content">
+
+
+                                    <div
+                                        class="d-flex
+                                               justify-content-between
+                                               gap-3">
+
+
+                                        <div>
+
+                                            <h2>
+                                                New Message
+                                            </h2>
+
+
+                                            <p>
+
+                                                You received a new
+                                                message from Anjali.
+
+                                            </p>
+
+                                        </div>
+
+
+                                        <span class="unread-dot"></span>
+
+
+                                    </div>
+
+
+                                    <span class="notification-time">
+
+                                        Yesterday, 8:45 PM
+
+                                    </span>
+
+
+                                    <div class="mt-3">
+
+                                        <a
+                                            href="messages.html?profile=KB0002"
+                                            class="btn btn-outline-brand btn-sm">
+
+                                            Read Message
+
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 WHATSAPP CONTACT REQUEST
+                            =================================================== -->
+
+                            <article
+                                class="notification-card unread"
+                                data-type="contact"
+                                data-whatsapp-request
+                                data-request-id="WR1001"
+                                data-profile-id="KB0002">
+
+
+                                <div class="notification-icon">
+                                    📱
+                                </div>
+
+
+                                <div class="notification-content">
+
+
+                                    <div
+                                        class="d-flex
+                                               justify-content-between
+                                               gap-3">
+
+
+                                        <div>
+
+                                            <h2>
+                                                Personal WhatsApp Request
+                                            </h2>
+
+
+                                            <p>
+
+                                                Anjali requested your
+                                                Personal WhatsApp number
+                                                after the conversation reached
+
+                                                <strong>
+                                                    15 total messages.
+                                                </strong>
+
+                                            </p>
+
+                                        </div>
+
+
+                                        <span class="unread-dot"></span>
+
+
+                                    </div>
+
+
+                                    <span class="notification-time">
+
+                                        Yesterday, 6:10 PM
+
+                                    </span>
+
+
+
+                                    <!-- Privacy Note -->
+
+                                    <div
+                                        class="alert alert-light border mt-3 mb-3"
+                                        role="note">
+
+                                        Your Personal WhatsApp number
+                                        remains hidden until you choose
+                                        to approve this request.
+
+                                    </div>
+
+
+
+                                    <!-- Actions -->
+
+                                    <div
+                                        class="whatsapp-request-actions
+                                               d-flex
+                                               gap-2
+                                               flex-wrap">
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-brand btn-sm approve-contact">
+
+                                            Approve WhatsApp Request
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-secondary btn-sm decline-contact">
+
+                                            Decline
+
+                                        </button>
+
+
+                                    </div>
+
+
+
+                                    <!-- Decision -->
+
+                                    <div
+                                        class="whatsapp-decision-message
+                                               alert
+                                               d-none
+                                               mt-3
+                                               mb-0"
+                                        role="status">
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 WHATSAPP REQUEST APPROVED
+                            =================================================== -->
+
+                            <article
+                                class="notification-card"
+                                data-type="contact">
+
+
+                                <div class="notification-icon">
+                                    ✅
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h2>
+                                        WhatsApp Request Approved
+                                    </h2>
+
+
+                                    <p>
+
+                                        Your Personal WhatsApp request
+                                        was approved.
+
+                                        You can now view the shared
+                                        Personal WhatsApp number in
+                                        your conversation.
+
+                                    </p>
+
+
+                                    <span class="notification-time">
+
+                                        10 September 2026
+
+                                    </span>
+
+
+                                    <div class="mt-3">
+
+                                        <a
+                                            href="messages.html?profile=KB0010"
+                                            class="btn btn-brand btn-sm">
+
+                                            Open Conversation
+
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 WHATSAPP REQUEST DECLINED
+                            =================================================== -->
+
+                            <article
+                                class="notification-card"
+                                data-type="contact">
+
+
+                                <div class="notification-icon">
+                                    🔒
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h2>
+                                        WhatsApp Request Declined
+                                    </h2>
+
+
+                                    <p>
+
+                                        Your Personal WhatsApp request
+                                        was declined.
+
+                                        The member's Personal WhatsApp
+                                        number remains hidden.
+
+                                    </p>
+
+
+                                    <span class="notification-time">
+
+                                        9 September 2026
+
+                                    </span>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 FAMILY CONTACT
+                            =================================================== -->
+
+                            <article
+                                class="notification-card"
+                                data-type="contact">
+
+
+                                <div class="notification-icon">
+                                    📞
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h2>
+                                        Family Contact Available
+                                    </h2>
+
+
+                                    <p>
+
+                                        This member's Family Contact
+                                        information is available to you
+                                        according to their current
+                                        privacy setting.
+
+                                    </p>
+
+
+                                    <span class="notification-time">
+
+                                        6 September 2026
+
+                                    </span>
+
+
+                                    <div class="mt-3">
+
+                                        <a
+                                            href="view-profile.html?id=KB0002"
+                                            class="btn btn-outline-brand btn-sm">
+
+                                            View Profile
+
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 PROFILE APPROVED
+                            =================================================== -->
+
+                            <article
+                                class="notification-card"
+                                data-type="account">
+
+
+                                <div class="notification-icon">
+                                    🛡️
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h2>
+                                        Profile Approved
+                                    </h2>
+
+
+                                    <p>
+
+                                        Your KaiBandham matrimony
+                                        profile has been reviewed
+                                        and approved.
+
+                                    </p>
+
+
+                                    <span class="notification-time">
+
+                                        5 September 2026
+
+                                    </span>
+
+
+                                    <div class="mt-3 d-flex gap-2 flex-wrap">
+
+                                        <a
+                                            href="profile.html"
+                                            class="btn btn-outline-brand btn-sm">
+
+                                            View My Profile
+
+                                        </a>
+
+
+                                        <a
+                                            href="profile-status.html"
+                                            class="btn btn-outline-secondary btn-sm">
+
+                                            Profile Status
+
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 PROFILE CHANGES REQUIRED
+                            =================================================== -->
+
+                            <article
+                                class="notification-card"
+                                data-type="account">
+
+
+                                <div class="notification-icon">
+                                    ✏️
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h2>
+                                        Profile Changes Required
+                                    </h2>
+
+
+                                    <p>
+
+                                        The administrator reviewed
+                                        your profile and requested
+                                        some changes before approval.
+
+                                    </p>
+
+
+                                    <div
+                                        class="alert alert-light border mt-3"
+                                        role="note">
+
+                                        Changes Required is not
+                                        a punishment or account suspension.
+
+                                        Update the requested information
+                                        and submit your profile again.
+
+                                    </div>
+
+
+                                    <span class="notification-time">
+
+                                        5 September 2026
+
+                                    </span>
+
+
+                                    <div class="mt-3">
+
+                                        <a
+                                            href="profile-status.html"
+                                            class="btn btn-brand btn-sm">
+
+                                            View Required Changes
+
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 REPORT STATUS
+                            =================================================== -->
+
+                            <article
+                                class="notification-card"
+                                data-type="safety">
+
+
+                                <div class="notification-icon">
+                                    ⚠️
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h2>
+                                        Report Status Updated
+                                    </h2>
+
+
+                                    <p>
+
+                                        A report you submitted has
+                                        received a status update.
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Current Status:
+                                        </strong>
+
+                                        Under Review
+
+                                    </p>
+
+
+                                    <span class="notification-time">
+
+                                        4 September 2026
+
+                                    </span>
+
+
+                                    <div class="mt-3">
+
+                                        <a
+                                            href="report-history.html"
+                                            class="btn btn-outline-brand btn-sm">
+
+                                            View Report History
+
+                                        </a>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ==================================================
+                                 KAI BANDHAM NOTICE
+                            =================================================== -->
+
+                            <article
+                                class="notification-card"
+                                data-type="account">
+
+
+                                <div class="notification-icon">
+                                    📢
+                                </div>
+
+
+                                <div class="notification-content">
+
+                                    <h2>
+                                        KaiBandham Notice
+                                    </h2>
+
+
+                                    <p>
+
+                                        Please keep your profile
+                                        information accurate and use
+                                        Report Profile for serious
+                                        safety concerns.
+
+                                    </p>
+
+
+                                    <span class="notification-time">
+
+                                        4 September 2026
+
+                                    </span>
+
+
+                                </div>
+
+
+                            </article>
+
+
+                        </div>
+
+
+
+                        <!-- ================= EMPTY FILTER STATE ================= -->
+
+                        <div
+                            id="notificationEmptyState"
+                            class="text-center py-5 d-none">
+
+                            <h2 class="h4">
+                                No Notifications
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                There are no notifications
+                                in this category.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+
+                KaiBandham — Accessible Matrimony for the Deaf Community in Kerala
+
+            </p>
+
+
+            <p class="mb-0">
+
+                &copy; 2026 KaiBandham.
+                All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

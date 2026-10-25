@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Manage KaiBandham website content and public notices.">
+
+    <title>Website Content | KaiBandham Admin</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= ADMIN NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container-fluid px-4">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="admin-dashboard.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+            <!-- Mobile Button -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#adminNavbar"
+                aria-controls="adminNavbar"
+                aria-expanded="false"
+                aria-label="Open admin navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="adminNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-dashboard.html">
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-users.html">
+
+                            Users
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-reports.html">
+
+                            Reports
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-complaints.html">
+
+                            Complaints
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="admin-content.html">
+
+                            Content
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a class="btn btn-outline-danger"
+                           href="login.html">
+
+                            Logout
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="admin-content-section py-5">
+
+            <div class="container-fluid px-4">
+
+
+                <!-- ================= HEADING ================= -->
+
+                <div class="d-flex
+                            justify-content-between
+                            align-items-center
+                            flex-wrap
+                            gap-3
+                            mb-4">
+
+                    <div>
+
+                        <h1>
+                            Website Content
+                        </h1>
+
+                        <p class="text-muted mb-0">
+
+                            Manage KaiBandham public information,
+                            notices and support contact details.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="admin-dashboard.html"
+                        class="btn btn-outline-secondary">
+
+                        ← Back to Dashboard
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- ================= INFORMATION ================= -->
+
+                <div class="alert alert-light border mb-4"
+                     role="note">
+
+                    <strong>
+                        Content Management:
+                    </strong>
+
+                    Changes made here can later be connected
+                    to the public KaiBandham pages through Django.
+
+                    Privacy Policy and Terms of Use should always
+                    match how the real website works before launch.
+
+                </div>
+
+
+
+                <!-- ================= FORM ================= -->
+
+                <form id="adminContentForm">
+
+
+
+                    <!-- =========================================
+                         HOMEPAGE ANNOUNCEMENT
+                    ========================================== -->
+
+                    <div class="admin-card mb-4">
+
+                        <div class="d-flex
+                                    justify-content-between
+                                    align-items-start
+                                    flex-wrap
+                                    gap-3
+                                    mb-3">
+
+                            <div>
+
+                                <h2 class="mb-1">
+                                    Homepage Announcement
+                                </h2>
+
+                                <p class="text-muted mb-0">
+
+                                    Show an important visual notice
+                                    on the KaiBandham homepage.
+
+                                </p>
+
+                            </div>
+
+
+                            <a
+                                href="index.html"
+                                class="btn btn-outline-secondary btn-sm"
+                                target="_blank">
+
+                                Open Homepage
+
+                            </a>
+
+                        </div>
+
+
+
+                        <div class="form-check form-switch mb-3">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="announcementEnabled"
+                                name="announcementEnabled"
+                                checked>
+
+
+                            <label
+                                class="form-check-label"
+                                for="announcementEnabled">
+
+                                Show announcement
+
+                            </label>
+
+                        </div>
+
+
+
+                        <div class="mb-3">
+
+                            <label
+                                for="announcementTitle"
+                                class="form-label">
+
+                                Announcement Title
+
+                            </label>
+
+                            <input
+                                type="text"
+                                id="announcementTitle"
+                                name="announcementTitle"
+                                class="form-control"
+                                maxlength="100"
+                                value="Welcome to KaiBandham">
+
+                        </div>
+
+
+
+                        <div>
+
+                            <label
+                                for="announcementMessage"
+                                class="form-label">
+
+                                Announcement Message
+
+                            </label>
+
+                            <textarea
+                                id="announcementMessage"
+                                name="announcementMessage"
+                                class="form-control"
+                                rows="4"
+                                maxlength="500">Please keep your profile information accurate and report suspicious profiles.</textarea>
+
+                            <div class="form-text">
+                                Maximum 500 characters.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         ABOUT
+                    ========================================== -->
+
+                    <div class="admin-card mb-4">
+
+                        <div class="d-flex
+                                    justify-content-between
+                                    align-items-start
+                                    flex-wrap
+                                    gap-3
+                                    mb-3">
+
+                            <div>
+
+                                <h2 class="mb-1">
+                                    About KaiBandham
+                                </h2>
+
+                                <p class="text-muted mb-0">
+                                    Main introduction for the About page.
+                                </p>
+
+                            </div>
+
+
+                            <a
+                                href="about.html"
+                                class="btn btn-outline-secondary btn-sm"
+                                target="_blank">
+
+                                Open About Page
+
+                            </a>
+
+                        </div>
+
+
+                        <label
+                            for="aboutContent"
+                            class="form-label">
+
+                            About Page Content
+
+                        </label>
+
+
+                        <textarea
+                            id="aboutContent"
+                            name="aboutContent"
+                            class="form-control"
+                            rows="7"
+                            maxlength="3000"
+                            required>KaiBandham is an accessible matrimony platform created for Deaf and hearing-impaired people in Kerala. The platform focuses on text-based communication, privacy, accessibility and safe marriage connections.</textarea>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         SAFETY
+                    ========================================== -->
+
+                    <div class="admin-card mb-4">
+
+                        <div class="d-flex
+                                    justify-content-between
+                                    align-items-start
+                                    flex-wrap
+                                    gap-3
+                                    mb-3">
+
+                            <div>
+
+                                <h2 class="mb-1">
+                                    Safety Information
+                                </h2>
+
+                                <p class="text-muted mb-0">
+                                    Public safety guidance for members.
+                                </p>
+
+                            </div>
+
+
+                            <a
+                                href="safety.html"
+                                class="btn btn-outline-secondary btn-sm"
+                                target="_blank">
+
+                                Open Safety Page
+
+                            </a>
+
+                        </div>
+
+
+                        <label
+                            for="safetyContent"
+                            class="form-label">
+
+                            Safety Page Content
+
+                        </label>
+
+
+                        <textarea
+                            id="safetyContent"
+                            name="safetyContent"
+                            class="form-control"
+                            rows="7"
+                            maxlength="3000"
+                            required>Protect your personal information and be careful when communicating with new people. Never send money because someone asks for financial help. Block Contact can be used to stop communication without punishing another member. Report Profile should be used for serious problems such as fake profiles, scams or harassment.</textarea>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         PRIVACY POLICY
+                    ========================================== -->
+
+                    <div class="admin-card mb-4">
+
+                        <div class="d-flex
+                                    justify-content-between
+                                    align-items-start
+                                    flex-wrap
+                                    gap-3
+                                    mb-3">
+
+                            <div>
+
+                                <h2 class="mb-1">
+                                    Privacy Policy
+                                </h2>
+
+                                <p class="text-muted mb-0">
+                                    Public privacy information.
+                                </p>
+
+                            </div>
+
+
+                            <a
+                                href="privacy-policy.html"
+                                class="btn btn-outline-secondary btn-sm"
+                                target="_blank">
+
+                                Open Privacy Policy
+
+                            </a>
+
+                        </div>
+
+
+                        <label
+                            for="privacyPolicyContent"
+                            class="form-label">
+
+                            Privacy Policy Content
+
+                        </label>
+
+
+                        <textarea
+                            id="privacyPolicyContent"
+                            name="privacyPolicyContent"
+                            class="form-control"
+                            rows="10"
+                            maxlength="10000"
+                            required>KaiBandham provides privacy controls for profile photos, personal WhatsApp numbers, email addresses, family contact information and profile visibility. Personal WhatsApp numbers are hidden by default and are not automatically revealed after the 15-message conversation limit. The member must approve a WhatsApp contact request before the number is shared.</textarea>
+
+
+                        <div class="form-text">
+
+                            Before launching KaiBandham, make sure
+                            this policy matches the real Django
+                            database and website behaviour.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         TERMS
+                    ========================================== -->
+
+                    <div class="admin-card mb-4">
+
+                        <div class="d-flex
+                                    justify-content-between
+                                    align-items-start
+                                    flex-wrap
+                                    gap-3
+                                    mb-3">
+
+                            <div>
+
+                                <h2 class="mb-1">
+                                    Terms of Use
+                                </h2>
+
+                                <p class="text-muted mb-0">
+                                    Rules for using KaiBandham.
+                                </p>
+
+                            </div>
+
+
+                            <a
+                                href="terms.html"
+                                class="btn btn-outline-secondary btn-sm"
+                                target="_blank">
+
+                                Open Terms
+
+                            </a>
+
+                        </div>
+
+
+                        <label
+                            for="termsContent"
+                            class="form-label">
+
+                            Terms Content
+
+                        </label>
+
+
+                        <textarea
+                            id="termsContent"
+                            name="termsContent"
+                            class="form-control"
+                            rows="10"
+                            maxlength="10000"
+                            required>Members must be 18 years or older, provide genuine profile information and use KaiBandham respectfully. Fake profiles, scams, harassment and inappropriate content are not allowed. Reports are reviewed by administrators before account action is taken. Blocking another member is a personal privacy action and does not automatically create a warning or punishment.</textarea>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         CONTACT INFORMATION
+                    ========================================== -->
+
+                    <div class="admin-card mb-4">
+
+                        <div class="d-flex
+                                    justify-content-between
+                                    align-items-start
+                                    flex-wrap
+                                    gap-3
+                                    mb-3">
+
+                            <div>
+
+                                <h2 class="mb-1">
+                                    Website Contact Information
+                                </h2>
+
+                                <p class="text-muted mb-0">
+
+                                    Public KaiBandham support
+                                    contact details.
+
+                                </p>
+
+                            </div>
+
+
+                            <a
+                                href="contact.html"
+                                class="btn btn-outline-secondary btn-sm"
+                                target="_blank">
+
+                                Open Contact Page
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="row">
+
+
+                            <!-- Support Email -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label
+                                    for="supportEmail"
+                                    class="form-label">
+
+                                    Support Email
+
+                                </label>
+
+
+                                <input
+                                    type="email"
+                                    id="supportEmail"
+                                    name="supportEmail"
+                                    class="form-control"
+                                    placeholder="support@example.com">
+
+                            </div>
+
+
+
+                            <!-- Support WhatsApp -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label
+                                    for="supportWhatsapp"
+                                    class="form-label">
+
+                                    Support WhatsApp
+
+                                </label>
+
+
+                                <input
+                                    type="tel"
+                                    id="supportWhatsapp"
+                                    name="supportWhatsapp"
+                                    class="form-control"
+                                    placeholder="+91 ...">
+
+
+                                <div class="form-text">
+
+                                    Use WhatsApp mainly for
+                                    text-based support.
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- Support Note -->
+
+                        <div class="mb-0">
+
+                            <label
+                                for="supportInformation"
+                                class="form-label">
+
+                                Support Information
+
+                            </label>
+
+
+                            <textarea
+                                id="supportInformation"
+                                name="supportInformation"
+                                class="form-control"
+                                rows="4"
+                                maxlength="1000">KaiBandham provides text-first support for Deaf and hearing-impaired members. Members can submit problems through the Contact page without making a voice call.</textarea>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         MAINTENANCE NOTICE
+                    ========================================== -->
+
+                    <div class="admin-card mb-4">
+
+                        <h2>
+                            Maintenance Notice
+                        </h2>
+
+
+                        <p class="text-muted">
+
+                            Show a visual message when
+                            KaiBandham is undergoing maintenance.
+
+                        </p>
+
+
+
+                        <div class="form-check form-switch mb-3">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="maintenanceEnabled"
+                                name="maintenanceEnabled">
+
+
+                            <label
+                                class="form-check-label"
+                                for="maintenanceEnabled">
+
+                                Enable maintenance notice
+
+                            </label>
+
+                        </div>
+
+
+
+                        <label
+                            for="maintenanceMessage"
+                            class="form-label">
+
+                            Maintenance Message
+
+                        </label>
+
+
+                        <textarea
+                            id="maintenanceMessage"
+                            name="maintenanceMessage"
+                            class="form-control"
+                            rows="3"
+                            maxlength="500"
+                            placeholder="Example: KaiBandham will be temporarily unavailable for maintenance."></textarea>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         FOOTER
+                    ========================================== -->
+
+                    <div class="admin-card mb-4">
+
+                        <h2>
+                            Footer
+                        </h2>
+
+
+                        <label
+                            for="footerText"
+                            class="form-label">
+
+                            Footer Text
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="footerText"
+                            name="footerText"
+                            class="form-control"
+                            maxlength="200"
+                            value="KaiBandham — Accessible Matrimony for the Deaf Community in Kerala"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         MESSAGE
+                    ========================================== -->
+
+                    <div
+                        id="adminContentMessage"
+                        class="alert d-none"
+                        role="status">
+                    </div>
+
+
+
+                    <!-- =========================================
+                         ACTIONS
+                    ========================================== -->
+
+                    <div class="d-flex gap-3 flex-wrap">
+
+
+                        <button
+                            type="button"
+                            class="btn btn-outline-brand btn-lg"
+                            id="previewContentBtn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#contentPreviewModal">
+
+                            Preview Content
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-brand btn-lg">
+
+                            Save Website Content
+
+                        </button>
+
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         CONTENT PREVIEW MODAL
+    =================================================== -->
+
+    <div
+        class="modal fade"
+        id="contentPreviewModal"
+        tabindex="-1"
+        aria-labelledby="contentPreviewModalLabel"
+        aria-hidden="true">
+
+
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+
+            <div class="modal-content">
+
+
+                <!-- Header -->
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title fs-5"
+                        id="contentPreviewModalLabel">
+
+                        Website Content Preview
+
+                    </h2>
+
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+
+                <!-- Body -->
+
+                <div class="modal-body">
+
+
+                    <!-- Announcement -->
+
+                    <section
+                        id="previewAnnouncementSection"
+                        class="border rounded p-3 mb-4">
+
+                        <h3
+                            class="h5"
+                            id="previewAnnouncementTitle">
+                        </h3>
+
+                        <p
+                            class="mb-0"
+                            id="previewAnnouncementMessage">
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- About -->
+
+                    <section class="mb-4">
+
+                        <h3 class="h5">
+                            About KaiBandham
+                        </h3>
+
+                        <p
+                            class="mb-0"
+                            id="previewAboutContent">
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- Safety -->
+
+                    <section class="mb-4">
+
+                        <h3 class="h5">
+                            Safety Information
+                        </h3>
+
+                        <p
+                            class="mb-0"
+                            id="previewSafetyContent">
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- Privacy -->
+
+                    <section class="mb-4">
+
+                        <h3 class="h5">
+                            Privacy Policy
+                        </h3>
+
+                        <p
+                            class="mb-0"
+                            id="previewPrivacyPolicyContent">
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- Terms -->
+
+                    <section class="mb-4">
+
+                        <h3 class="h5">
+                            Terms of Use
+                        </h3>
+
+                        <p
+                            class="mb-0"
+                            id="previewTermsContent">
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- Contact -->
+
+                    <section class="mb-4">
+
+                        <h3 class="h5">
+                            Contact Information
+                        </h3>
+
+                        <p id="previewSupportEmail">
+                        </p>
+
+                        <p id="previewSupportWhatsapp">
+                        </p>
+
+                        <p
+                            class="mb-0"
+                            id="previewSupportInformation">
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- Maintenance -->
+
+                    <section
+                        id="previewMaintenanceSection"
+                        class="alert alert-warning d-none">
+
+                        <h3 class="h6 fw-bold">
+                            Maintenance Notice
+                        </h3>
+
+                        <p
+                            class="mb-0"
+                            id="previewMaintenanceMessage">
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- Footer -->
+
+                    <section class="border-top pt-3">
+
+                        <strong>
+                            Footer:
+                        </strong>
+
+                        <span id="previewFooterText">
+                        </span>
+
+                    </section>
+
+
+                </div>
+
+
+
+                <!-- Footer -->
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Close Preview
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+                KaiBandham Admin
+            </p>
+
+            <p class="mb-0">
+                &copy; 2026 KaiBandham. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

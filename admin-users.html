@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Manage KaiBandham member accounts.">
+
+    <title>Manage Users | KaiBandham Admin</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= ADMIN NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container-fluid px-4">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="admin-dashboard.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+            <!-- Mobile Button -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#adminNavbar"
+                aria-controls="adminNavbar"
+                aria-expanded="false"
+                aria-label="Open admin navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="adminNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-dashboard.html">
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="admin-users.html">
+
+                            Users
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-reports.html">
+
+                            Reports
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-complaints.html">
+
+                            Complaints
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-content.html">
+
+                            Content
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a class="btn btn-outline-danger"
+                           href="login.html">
+
+                            Logout
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="admin-users-section py-5">
+
+            <div class="container-fluid px-4">
+
+
+                <!-- ================= HEADING ================= -->
+
+                <div class="d-flex
+                            justify-content-between
+                            align-items-center
+                            flex-wrap
+                            gap-3
+                            mb-4">
+
+                    <div>
+
+                        <h1>
+                            Manage Users
+                        </h1>
+
+                        <p class="text-muted mb-0">
+
+                            Search, view and manage existing
+                            KaiBandham member accounts.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="admin-dashboard.html"
+                        class="btn btn-outline-secondary">
+
+                        ← Back to Dashboard
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- ================= APPROVAL NOTICE ================= -->
+
+                <div class="alert alert-light border mb-4"
+                     role="note">
+
+                    <div class="d-flex
+                                justify-content-between
+                                align-items-center
+                                flex-wrap
+                                gap-3">
+
+                        <div>
+
+                            <strong>
+                                Looking for new profile approvals?
+                            </strong>
+
+                            <p class="mb-0 mt-1">
+
+                                New profiles are reviewed separately
+                                from existing account management.
+
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="admin-dashboard.html#pendingProfiles"
+                            class="btn btn-outline-brand btn-sm">
+
+                            Pending Profile Approvals
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= ACCOUNT SAFETY RULE ================= -->
+
+                <div class="alert alert-warning mb-4"
+                     role="note">
+
+                    <strong>
+                        Account Action Rule:
+                    </strong>
+
+                    Suspending or removing an account should require
+                    a valid admin reason.
+
+                    Blocking another member does not cause account
+                    punishment, and reports do not automatically
+                    suspend an account.
+
+                </div>
+
+
+
+                <!-- ================= SUMMARY ================= -->
+
+                <div class="row g-4 mb-4">
+
+
+                    <div class="col-md-4">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                👥
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Members Shown
+                                </span>
+
+                                <h2 id="visibleUserCount">
+                                    0
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                ✅
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Active
+                                </span>
+
+                                <h2 id="activeUserCount">
+                                    0
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                ⏸️
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Suspended
+                                </span>
+
+                                <h2 id="suspendedUserCount">
+                                    0
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= FILTERS ================= -->
+
+                <div class="admin-card mb-4">
+
+                    <div class="row g-3">
+
+
+                        <!-- Search -->
+
+                        <div class="col-md-6 col-lg-3">
+
+                            <label
+                                for="adminUserSearch"
+                                class="form-label">
+
+                                Search User
+
+                            </label>
+
+                            <input
+                                type="search"
+                                id="adminUserSearch"
+                                class="form-control"
+                                placeholder="Name or Profile ID">
+
+                        </div>
+
+
+
+                        <!-- District -->
+
+                        <div class="col-md-6 col-lg-3">
+
+                            <label
+                                for="adminDistrictFilter"
+                                class="form-label">
+
+                                District
+
+                            </label>
+
+                            <select
+                                id="adminDistrictFilter"
+                                class="form-select">
+
+                                <option value="all">
+                                    All Kerala
+                                </option>
+
+                                <option value="thiruvananthapuram">
+                                    Thiruvananthapuram
+                                </option>
+
+                                <option value="kollam">
+                                    Kollam
+                                </option>
+
+                                <option value="pathanamthitta">
+                                    Pathanamthitta
+                                </option>
+
+                                <option value="alappuzha">
+                                    Alappuzha
+                                </option>
+
+                                <option value="kottayam">
+                                    Kottayam
+                                </option>
+
+                                <option value="idukki">
+                                    Idukki
+                                </option>
+
+                                <option value="ernakulam">
+                                    Ernakulam
+                                </option>
+
+                                <option value="thrissur">
+                                    Thrissur
+                                </option>
+
+                                <option value="palakkad">
+                                    Palakkad
+                                </option>
+
+                                <option value="malappuram">
+                                    Malappuram
+                                </option>
+
+                                <option value="kozhikode">
+                                    Kozhikode
+                                </option>
+
+                                <option value="wayanad">
+                                    Wayanad
+                                </option>
+
+                                <option value="kannur">
+                                    Kannur
+                                </option>
+
+                                <option value="kasaragod">
+                                    Kasaragod
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- Account Status -->
+
+                        <div class="col-md-6 col-lg-3">
+
+                            <label
+                                for="adminStatusFilter"
+                                class="form-label">
+
+                                Account Status
+
+                            </label>
+
+                            <select
+                                id="adminStatusFilter"
+                                class="form-select">
+
+                                <option value="all">
+                                    All Statuses
+                                </option>
+
+                                <option value="active">
+                                    Active
+                                </option>
+
+                                <option value="suspended">
+                                    Suspended
+                                </option>
+
+                                <option value="removed">
+                                    Removed
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- Communication Method -->
+
+                        <div class="col-md-6 col-lg-3">
+
+                            <label
+                                for="adminCommunicationFilter"
+                                class="form-label">
+
+                                Communication Method
+
+                            </label>
+
+                            <select
+                                id="adminCommunicationFilter"
+                                class="form-select">
+
+                                <option value="all">
+                                    All Communication Methods
+                                </option>
+
+                                <option value="isl">
+                                    Indian Sign Language (ISL)
+                                </option>
+
+                                <option value="speech">
+                                    Speech / Spoken Language
+                                </option>
+
+                                <option value="sign-and-speech">
+                                    Sign Language &amp; Speech
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= ACTION MESSAGE ================= -->
+
+                <div
+                    id="adminUserActionMessage"
+                    class="alert d-none"
+                    role="status">
+                </div>
+
+
+
+                <!-- ================= USER TABLE ================= -->
+
+                <div class="admin-card">
+
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle admin-users-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        User
+                                    </th>
+
+                                    <th>
+                                        Age
+                                    </th>
+
+                                    <th>
+                                        District
+                                    </th>
+
+                                    <th>
+                                        Communication Method
+                                    </th>
+
+                                    <th>
+                                        Religion
+                                    </th>
+
+                                    <th>
+                                        Marital Status
+                                    </th>
+
+                                    <th>
+                                        Registered
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Actions
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+
+                            <tbody id="adminUserTableBody">
+
+
+                                <!-- ================= USER 1 ================= -->
+
+                                <tr
+                                    data-user-row
+                                    data-user-name="Anjali"
+                                    data-profile-id="KB0002"
+                                    data-district="ernakulam"
+                                    data-status="active"
+                                    data-communication="isl">
+
+
+                                    <td>
+
+                                        <div class="d-flex
+                                                    align-items-center
+                                                    gap-3">
+
+                                            <img
+                                                src="images/profile-placeholder.png"
+                                                alt=""
+                                                class="admin-user-photo">
+
+                                            <div>
+
+                                                <strong>
+                                                    Anjali
+                                                </strong>
+
+                                                <span class="d-block text-muted">
+                                                    KB0002
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        26
+                                    </td>
+
+
+                                    <td>
+                                        Ernakulam
+                                    </td>
+
+
+                                    <td>
+                                        Indian Sign Language (ISL)
+                                    </td>
+
+
+                                    <td>
+                                        Christian
+                                    </td>
+
+
+                                    <td>
+                                        Never Married
+                                    </td>
+
+
+                                    <td>
+                                        26 Jul 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="admin-user-actions">
+
+
+                                            <a
+                                                href="view-profile.html"
+                                                class="btn btn-outline-brand btn-sm">
+
+                                                View
+
+                                            </a>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-warning btn-sm suspend-user">
+
+                                                Suspend
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-success btn-sm reactivate-user d-none">
+
+                                                Reactivate
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-danger btn-sm remove-user">
+
+                                                Remove
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+
+                                <!-- ================= USER 2 ================= -->
+
+                                <tr
+                                    data-user-row
+                                    data-user-name="Fathima"
+                                    data-profile-id="KB0005"
+                                    data-district="malappuram"
+                                    data-status="active"
+                                    data-communication="speech">
+
+
+                                    <td>
+
+                                        <div class="d-flex
+                                                    align-items-center
+                                                    gap-3">
+
+                                            <img
+                                                src="images/profile-placeholder.png"
+                                                alt=""
+                                                class="admin-user-photo">
+
+                                            <div>
+
+                                                <strong>
+                                                    Fathima
+                                                </strong>
+
+                                                <span class="d-block text-muted">
+                                                    KB0005
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        27
+                                    </td>
+
+
+                                    <td>
+                                        Malappuram
+                                    </td>
+
+
+                                    <td>
+                                        Speech / Spoken Language
+                                    </td>
+
+
+                                    <td>
+                                        Muslim
+                                    </td>
+
+
+                                    <td>
+                                        Never Married
+                                    </td>
+
+
+                                    <td>
+                                        1 Sep 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="admin-user-actions">
+
+
+                                            <a
+                                                href="view-profile.html"
+                                                class="btn btn-outline-brand btn-sm">
+
+                                                View
+
+                                            </a>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-warning btn-sm suspend-user">
+
+                                                Suspend
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-success btn-sm reactivate-user d-none">
+
+                                                Reactivate
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-danger btn-sm remove-user">
+
+                                                Remove
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+
+                                <!-- ================= USER 3 ================= -->
+
+                                <tr
+                                    data-user-row
+                                    data-user-name="Rahul"
+                                    data-profile-id="KB0091"
+                                    data-district="kozhikode"
+                                    data-status="suspended"
+                                    data-communication="sign-and-speech">
+
+
+                                    <td>
+
+                                        <div class="d-flex
+                                                    align-items-center
+                                                    gap-3">
+
+                                            <img
+                                                src="images/profile-placeholder.png"
+                                                alt=""
+                                                class="admin-user-photo">
+
+                                            <div>
+
+                                                <strong>
+                                                    Rahul
+                                                </strong>
+
+                                                <span class="d-block text-muted">
+                                                    KB0091
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        30
+                                    </td>
+
+
+                                    <td>
+                                        Kozhikode
+                                    </td>
+
+
+                                    <td>
+                                        Sign Language &amp; Speech
+                                    </td>
+
+
+                                    <td>
+                                        Hindu
+                                    </td>
+
+
+                                    <td>
+                                        Divorced
+                                    </td>
+
+
+                                    <td>
+                                        26 Aug 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status suspended">
+                                            Suspended
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="admin-user-actions">
+
+
+                                            <a
+                                                href="view-profile.html"
+                                                class="btn btn-outline-brand btn-sm">
+
+                                                View
+
+                                            </a>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-warning btn-sm suspend-user d-none">
+
+                                                Suspend
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-success btn-sm reactivate-user">
+
+                                                Reactivate
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-danger btn-sm remove-user">
+
+                                                Remove
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- No Users -->
+
+                    <div
+                        id="noAdminUsersMessage"
+                        class="alert alert-light border d-none mt-3"
+                        role="status">
+
+                        No users match your search or filters.
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         SUSPEND USER MODAL
+    =================================================== -->
+
+    <div
+        class="modal fade"
+        id="suspendUserModal"
+        tabindex="-1"
+        aria-labelledby="suspendUserModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+
+                <!-- Header -->
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title fs-5"
+                        id="suspendUserModalLabel">
+
+                        Suspend Account
+
+                    </h2>
+
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+
+                <!-- Body -->
+
+                <div class="modal-body">
+
+
+                    <div class="alert alert-warning">
+
+                        Suspension prevents the member from
+                        using their account.
+
+                        Do not suspend an account simply because
+                        another member blocked or reported them.
+
+                    </div>
+
+
+                    <div class="border rounded p-3 mb-3">
+
+                        <strong id="suspendUserName">
+                            Member
+                        </strong>
+
+                        <span
+                            class="d-block text-muted"
+                            id="suspendUserProfileId">
+
+                            Profile ID
+
+                        </span>
+
+                    </div>
+
+
+                    <label
+                        for="suspendReason"
+                        class="form-label">
+
+                        Suspension Reason
+
+                    </label>
+
+
+                    <select
+                        id="suspendReason"
+                        class="form-select">
+
+                        <option value="">
+                            Select Reason
+                        </option>
+
+                        <option value="fake-profile">
+                            Confirmed Fake Profile
+                        </option>
+
+                        <option value="scam">
+                            Confirmed Scam / Fraud
+                        </option>
+
+                        <option value="harassment">
+                            Confirmed Harassment
+                        </option>
+
+                        <option value="inappropriate">
+                            Serious Inappropriate Behaviour
+                        </option>
+
+                        <option value="terms">
+                            Terms Violation
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+                    <label
+                        for="suspendAdminNote"
+                        class="form-label mt-3">
+
+                        Admin Note
+
+                    </label>
+
+
+                    <textarea
+                        id="suspendAdminNote"
+                        class="form-control"
+                        rows="4"
+                        maxlength="1000"
+                        placeholder="Explain why this account is being suspended..."></textarea>
+
+
+                    <div class="form-text">
+
+                        Record the reason for the admin action.
+
+                    </div>
+
+
+                    <div
+                        id="suspendUserMessage"
+                        class="alert alert-warning d-none mt-3 mb-0"
+                        role="status">
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Footer -->
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="confirmSuspendUser">
+
+                        Suspend Account
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         REMOVE USER MODAL
+    =================================================== -->
+
+    <div
+        class="modal fade"
+        id="removeUserModal"
+        tabindex="-1"
+        aria-labelledby="removeUserModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+
+                <!-- Header -->
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title fs-5"
+                        id="removeUserModalLabel">
+
+                        Remove Account
+
+                    </h2>
+
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+
+                <!-- Body -->
+
+                <div class="modal-body">
+
+
+                    <div class="alert alert-danger">
+
+                        Removing an account is a serious
+                        administrator action.
+
+                        Review the case before continuing.
+
+                    </div>
+
+
+                    <div class="border rounded p-3 mb-3">
+
+                        <strong id="removeUserName">
+                            Member
+                        </strong>
+
+                        <span
+                            class="d-block text-muted"
+                            id="removeUserProfileId">
+
+                            Profile ID
+
+                        </span>
+
+                    </div>
+
+
+                    <label
+                        for="removeReason"
+                        class="form-label">
+
+                        Removal Reason
+
+                    </label>
+
+
+                    <select
+                        id="removeReason"
+                        class="form-select">
+
+                        <option value="">
+                            Select Reason
+                        </option>
+
+                        <option value="fake-profile">
+                            Confirmed Fake Profile
+                        </option>
+
+                        <option value="scam">
+                            Confirmed Scam / Fraud
+                        </option>
+
+                        <option value="harassment">
+                            Confirmed Harassment
+                        </option>
+
+                        <option value="inappropriate">
+                            Serious Inappropriate Content
+                        </option>
+
+                        <option value="multiple-fake">
+                            Multiple Fake Accounts
+                        </option>
+
+                        <option value="terms">
+                            Serious Terms Violation
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+                    <label
+                        for="removeAdminNote"
+                        class="form-label mt-3">
+
+                        Admin Note
+
+                    </label>
+
+
+                    <textarea
+                        id="removeAdminNote"
+                        class="form-control"
+                        rows="4"
+                        maxlength="1000"
+                        placeholder="Explain why this account is being removed..."></textarea>
+
+
+                    <div
+                        id="removeUserMessage"
+                        class="alert alert-danger d-none mt-3 mb-0"
+                        role="status">
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Footer -->
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="confirmRemoveUser">
+
+                        Remove Account
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+                KaiBandham Admin
+            </p>
+
+            <p class="mb-0">
+                &copy; 2026 KaiBandham. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

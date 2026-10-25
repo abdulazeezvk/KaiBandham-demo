@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Search approved Deaf matrimony profiles across Kerala on KaiBandham.">
+
+    <title>Search Profiles | KaiBandham</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Open navigation menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- Logged-in Navigation -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <!-- Search -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="search.html"
+                            aria-current="page">
+
+                            Search Profiles
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Interests -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="interests.html">
+
+                            Interests
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Messages -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="messages.html">
+
+                            Messages
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Notifications -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link position-relative"
+                            href="notifications.html">
+
+                            Notifications
+
+                            <span class="notification-count">
+                                4
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Saved -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="saved-profiles.html">
+
+                            Saved
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Settings -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="account-settings.html">
+
+                            Settings
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- My Profile -->
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a
+                            class="btn btn-outline-brand"
+                            href="profile.html">
+
+                            My Profile
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="search-page-section py-5">
+
+            <div class="container">
+
+
+                <!-- ================= HEADING ================= -->
+
+                <div class="text-center mb-4">
+
+                    <h1>
+                        Find Your Life Partner
+                    </h1>
+
+
+                    <p class="text-muted mb-0">
+
+                        Search approved KaiBandham
+                        matrimony profiles across Kerala.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= MEMBER NOTICE ================= -->
+
+                <div
+                    class="alert alert-light border mb-4"
+                    role="note">
+
+                    <strong>
+                        Member Search:
+                    </strong>
+
+                    Search Profiles is available only to
+                    logged-in KaiBandham members.
+
+                    Only approved, active and visible profiles
+                    appear in search results.
+
+                </div>
+
+
+
+                <div class="row g-4">
+
+
+                    <!-- ==================================================
+                         SEARCH FILTERS
+                    =================================================== -->
+
+                    <div class="col-lg-3">
+
+
+                        <div class="search-filter-card">
+
+
+                            <h2 class="search-filter-title">
+                                Search Filters
+                            </h2>
+
+
+
+                            <form
+                                id="searchForm"
+                                novalidate>
+
+
+                                <!-- ================= AGE ================= -->
+
+                                <div class="mb-4">
+
+                                    <label class="form-label">
+                                        Age
+                                    </label>
+
+
+                                    <div class="row g-2">
+
+
+                                        <!-- Minimum -->
+
+                                        <div class="col-6">
+
+                                            <label
+                                                for="minimumAge"
+                                                class="visually-hidden">
+
+                                                Minimum Age
+
+                                            </label>
+
+
+                                            <select
+                                                class="form-select"
+                                                id="minimumAge"
+                                                name="minimumAge">
+
+                                                <option value="">
+                                                    Min Age
+                                                </option>
+
+                                                <option value="18">18</option>
+                                                <option value="20">20</option>
+                                                <option value="22">22</option>
+                                                <option value="24">24</option>
+                                                <option value="26">26</option>
+                                                <option value="28">28</option>
+                                                <option value="30">30</option>
+                                                <option value="32">32</option>
+                                                <option value="35">35</option>
+                                                <option value="40">40</option>
+                                                <option value="45">45</option>
+                                                <option value="50">50</option>
+                                                <option value="55">55</option>
+                                                <option value="60">60</option>
+
+                                            </select>
+
+                                        </div>
+
+
+
+                                        <!-- Maximum -->
+
+                                        <div class="col-6">
+
+                                            <label
+                                                for="maximumAge"
+                                                class="visually-hidden">
+
+                                                Maximum Age
+
+                                            </label>
+
+
+                                            <select
+                                                class="form-select"
+                                                id="maximumAge"
+                                                name="maximumAge">
+
+                                                <option value="">
+                                                    Max Age
+                                                </option>
+
+                                                <option value="20">20</option>
+                                                <option value="22">22</option>
+                                                <option value="24">24</option>
+                                                <option value="26">26</option>
+                                                <option value="28">28</option>
+                                                <option value="30">30</option>
+                                                <option value="32">32</option>
+                                                <option value="35">35</option>
+                                                <option value="40">40</option>
+                                                <option value="45">45</option>
+                                                <option value="50">50</option>
+                                                <option value="55">55</option>
+                                                <option value="60">60</option>
+                                                <option value="70">70</option>
+                                                <option value="80">80</option>
+
+                                            </select>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- ================= DISTRICT ================= -->
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="district"
+                                        class="form-label">
+
+                                        District
+
+                                    </label>
+
+
+                                    <select
+                                        id="district"
+                                        name="district"
+                                        class="form-select">
+
+                                        <option value="">
+                                            All Kerala
+                                        </option>
+
+                                        <option value="thiruvananthapuram">
+                                            Thiruvananthapuram
+                                        </option>
+
+                                        <option value="kollam">
+                                            Kollam
+                                        </option>
+
+                                        <option value="pathanamthitta">
+                                            Pathanamthitta
+                                        </option>
+
+                                        <option value="alappuzha">
+                                            Alappuzha
+                                        </option>
+
+                                        <option value="kottayam">
+                                            Kottayam
+                                        </option>
+
+                                        <option value="idukki">
+                                            Idukki
+                                        </option>
+
+                                        <option value="ernakulam">
+                                            Ernakulam
+                                        </option>
+
+                                        <option value="thrissur">
+                                            Thrissur
+                                        </option>
+
+                                        <option value="palakkad">
+                                            Palakkad
+                                        </option>
+
+                                        <option value="malappuram">
+                                            Malappuram
+                                        </option>
+
+                                        <option value="kozhikode">
+                                            Kozhikode
+                                        </option>
+
+                                        <option value="wayanad">
+                                            Wayanad
+                                        </option>
+
+                                        <option value="kannur">
+                                            Kannur
+                                        </option>
+
+                                        <option value="kasaragod">
+                                            Kasaragod
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <!-- ================= RELIGION ================= -->
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="religion"
+                                        class="form-label">
+
+                                        Religion
+
+                                    </label>
+
+
+                                    <select
+                                        id="religion"
+                                        name="religion"
+                                        class="form-select">
+
+                                        <option value="">
+                                            Any Religion
+                                        </option>
+
+                                        <option value="hindu">
+                                            Hindu
+                                        </option>
+
+                                        <option value="muslim">
+                                            Muslim
+                                        </option>
+
+                                        <option value="christian">
+                                            Christian
+                                        </option>
+
+                                        <option value="other">
+                                            Other
+                                        </option>
+
+                                        <option value="prefer-not">
+                                            Prefer not to say
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <!-- ================= MARITAL STATUS ================= -->
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="searchMaritalStatus"
+                                        class="form-label">
+
+                                        Marital Status
+
+                                    </label>
+
+
+                                    <select
+                                        id="searchMaritalStatus"
+                                        name="maritalStatus"
+                                        class="form-select">
+
+                                        <option value="">
+                                            Any Status
+                                        </option>
+
+                                        <option value="never-married">
+                                            Never Married
+                                        </option>
+
+                                        <option value="divorced">
+                                            Divorced
+                                        </option>
+
+                                        <option value="widowed">
+                                            Widowed
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <!-- ================= COMMUNICATION METHOD ================= -->
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="communicationMethod"
+                                        class="form-label">
+
+                                        Communication Method
+
+                                    </label>
+
+
+                                    <select
+                                        id="communicationMethod"
+                                        name="communicationMethod"
+                                        class="form-select">
+
+                                        <option value="">
+                                            All Communication Methods
+                                        </option>
+
+                                        <option value="isl">
+                                            Indian Sign Language (ISL)
+                                        </option>
+
+                                        <option value="speech">
+                                            Speech / Spoken Language
+                                        </option>
+
+                                        <option value="sign-and-speech">
+                                            Sign Language &amp; Speech
+                                        </option>
+
+                                        <option value="other">
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <!-- ================= EDUCATION ================= -->
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="searchEducation"
+                                        class="form-label">
+
+                                        Education
+
+                                    </label>
+
+
+                                    <select
+                                        id="searchEducation"
+                                        name="education"
+                                        class="form-select">
+
+                                        <option value="">
+                                            Any Education
+                                        </option>
+
+                                        <option value="high-school">
+                                            High School
+                                        </option>
+
+                                        <option value="higher-secondary">
+                                            Higher Secondary
+                                        </option>
+
+                                        <option value="diploma">
+                                            Diploma
+                                        </option>
+
+                                        <option value="bachelors">
+                                            Bachelor's Degree
+                                        </option>
+
+                                        <option value="masters">
+                                            Master's Degree
+                                        </option>
+
+                                        <option value="professional">
+                                            Professional Degree
+                                        </option>
+
+                                        <option value="other">
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+
+                                <!-- ================= OCCUPATION ================= -->
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="searchOccupation"
+                                        class="form-label">
+
+                                        Occupation
+
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        id="searchOccupation"
+                                        name="occupation"
+                                        class="form-control"
+                                        maxlength="100"
+                                        placeholder="Example: Accountant">
+
+                                </div>
+
+
+
+                                <!-- ================= MESSAGE ================= -->
+
+                                <div
+                                    id="searchMessage"
+                                    class="alert d-none"
+                                    role="status">
+                                </div>
+
+
+
+                                <!-- ================= BUTTONS ================= -->
+
+                                <div class="d-grid gap-2">
+
+                                    <button
+                                        type="submit"
+                                        id="searchProfilesBtn"
+                                        class="btn btn-brand btn-lg">
+
+                                        Search Profiles
+
+                                    </button>
+
+
+                                    <button
+                                        type="reset"
+                                        id="clearSearchBtn"
+                                        class="btn btn-outline-secondary">
+
+                                        Clear Filters
+
+                                    </button>
+
+                                </div>
+
+
+                            </form>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         RESULTS
+                    =================================================== -->
+
+                    <div class="col-lg-9">
+
+
+                        <!-- ================= RESULTS HEADER ================= -->
+
+                        <div
+                            class="d-flex
+                                   justify-content-between
+                                   align-items-center
+                                   flex-wrap
+                                   gap-3
+                                   mb-4">
+
+
+                            <div>
+
+                                <h2 class="mb-1">
+                                    Profiles
+                                </h2>
+
+
+                                <p
+                                    id="searchResultText"
+                                    class="text-muted mb-0">
+
+                                    Example approved profiles for frontend design.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- Sort -->
+
+                            <div>
+
+                                <label
+                                    for="searchSort"
+                                    class="visually-hidden">
+
+                                    Sort Profiles
+
+                                </label>
+
+
+                                <select
+                                    id="searchSort"
+                                    name="sort"
+                                    class="form-select search-sort">
+
+                                    <option value="newest">
+                                        Newest Profiles
+                                    </option>
+
+                                    <option value="age-ascending">
+                                        Age: Low to High
+                                    </option>
+
+                                    <option value="age-descending">
+                                        Age: High to Low
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================= PRIVACY NOTICE ================= -->
+
+                        <div
+                            class="alert alert-light border mb-4"
+                            role="note">
+
+                            Personal WhatsApp, email and Family Contact
+                            details are not shown on search cards.
+
+                            Profile photos follow each member's
+                            Photo Privacy setting.
+
+                        </div>
+
+
+
+                        <!-- ==================================================
+                             PROFILE GRID
+                        =================================================== -->
+
+                        <div class="search-profile-grid">
+
+
+
+                            <!-- ================= PROFILE 1 ================= -->
+
+                            <article
+                                class="search-profile-card"
+                                data-profile-id="KB0002">
+
+
+                                <!-- Photo -->
+
+                                <div class="search-profile-photo-area">
+
+                                    <img
+                                        src="images/profile-placeholder.png"
+                                        class="search-profile-photo"
+                                        alt="Profile photo for Anjali">
+
+
+                                    <span class="verified-badge">
+
+                                        ✓ Approved
+
+                                    </span>
+
+                                </div>
+
+
+
+                                <!-- Content -->
+
+                                <div class="profile-card-content">
+
+
+                                    <h3>
+                                        Anjali
+                                    </h3>
+
+
+                                    <p class="profile-number">
+                                        KB0002
+                                    </p>
+
+
+
+                                    <!-- Quick Details -->
+
+                                    <div class="profile-quick-details">
+
+                                        <span>
+                                            26 Years
+                                        </span>
+
+                                        <span>
+                                            Ernakulam
+                                        </span>
+
+                                        <span>
+                                            Never Married
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <p>
+
+                                        <strong>
+                                            Religion:
+                                        </strong>
+
+                                        Christian
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Education:
+                                        </strong>
+
+                                        Bachelor's Degree
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Occupation:
+                                        </strong>
+
+                                        Designer
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Indian Sign Language (ISL)
+
+                                    </p>
+
+
+
+                                    <!-- Actions -->
+
+                                    <div class="profile-card-actions">
+
+                                        <a
+                                            href="view-profile.html?id=KB0002"
+                                            class="btn btn-brand">
+
+                                            View Profile
+
+                                        </a>
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-link save-profile-btn"
+                                            data-profile-id="KB0002">
+
+                                            Save Profile
+
+                                        </button>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ================= PROFILE 2 ================= -->
+
+                            <article
+                                class="search-profile-card"
+                                data-profile-id="KB0003">
+
+
+                                <!-- Photo -->
+
+                                <div class="search-profile-photo-area">
+
+                                    <img
+                                        src="images/profile-placeholder.png"
+                                        class="search-profile-photo"
+                                        alt="Profile photo for Rahul">
+
+
+                                    <span class="verified-badge">
+
+                                        ✓ Approved
+
+                                    </span>
+
+                                </div>
+
+
+
+                                <!-- Content -->
+
+                                <div class="profile-card-content">
+
+
+                                    <h3>
+                                        Rahul
+                                    </h3>
+
+
+                                    <p class="profile-number">
+                                        KB0003
+                                    </p>
+
+
+
+                                    <!-- Quick Details -->
+
+                                    <div class="profile-quick-details">
+
+                                        <span>
+                                            29 Years
+                                        </span>
+
+                                        <span>
+                                            Kozhikode
+                                        </span>
+
+                                        <span>
+                                            Never Married
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <p>
+
+                                        <strong>
+                                            Religion:
+                                        </strong>
+
+                                        Hindu
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Education:
+                                        </strong>
+
+                                        Diploma
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Occupation:
+                                        </strong>
+
+                                        Technician
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Sign Language &amp; Speech
+
+                                    </p>
+
+
+
+                                    <!-- Actions -->
+
+                                    <div class="profile-card-actions">
+
+                                        <a
+                                            href="view-profile.html?id=KB0003"
+                                            class="btn btn-brand">
+
+                                            View Profile
+
+                                        </a>
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-link save-profile-btn"
+                                            data-profile-id="KB0003">
+
+                                            Save Profile
+
+                                        </button>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+
+                            <!-- ================= PROFILE 3 ================= -->
+
+                            <article
+                                class="search-profile-card"
+                                data-profile-id="KB0004">
+
+
+                                <!-- Photo -->
+
+                                <div class="search-profile-photo-area">
+
+                                    <img
+                                        src="images/profile-placeholder.png"
+                                        class="search-profile-photo"
+                                        alt="Profile photo for Fathima">
+
+
+                                    <span class="verified-badge">
+
+                                        ✓ Approved
+
+                                    </span>
+
+                                </div>
+
+
+
+                                <!-- Content -->
+
+                                <div class="profile-card-content">
+
+
+                                    <h3>
+                                        Fathima
+                                    </h3>
+
+
+                                    <p class="profile-number">
+                                        KB0004
+                                    </p>
+
+
+
+                                    <!-- Quick Details -->
+
+                                    <div class="profile-quick-details">
+
+                                        <span>
+                                            25 Years
+                                        </span>
+
+                                        <span>
+                                            Malappuram
+                                        </span>
+
+                                        <span>
+                                            Never Married
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <p>
+
+                                        <strong>
+                                            Religion:
+                                        </strong>
+
+                                        Muslim
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Education:
+                                        </strong>
+
+                                        Master's Degree
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Occupation:
+                                        </strong>
+
+                                        Teacher
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Indian Sign Language (ISL)
+
+                                    </p>
+
+
+
+                                    <!-- Actions -->
+
+                                    <div class="profile-card-actions">
+
+                                        <a
+                                            href="view-profile.html?id=KB0004"
+                                            class="btn btn-brand">
+
+                                            View Profile
+
+                                        </a>
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-link save-profile-btn"
+                                            data-profile-id="KB0004">
+
+                                            Save Profile
+
+                                        </button>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </article>
+
+
+                        </div>
+
+
+
+                        <!-- ================= EMPTY STATE ================= -->
+
+                        <div
+                            id="searchEmptyState"
+                            class="text-center py-5 d-none">
+
+                            <h3>
+                                No Profiles Found
+                            </h3>
+
+
+                            <p class="text-muted mb-0">
+
+                                Try changing your search filters.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+
+                KaiBandham — Accessible Matrimony for the Deaf Community in Kerala
+
+            </p>
+
+
+            <p class="mb-0">
+
+                &copy; 2026 KaiBandham.
+                All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="View safety reports you have submitted to KaiBandham administrators.">
+
+    <title>Report History | KaiBandham</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+
+            <!-- Mobile Navigation -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Open navigation menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- Logged-in Navigation -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <!-- Search -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="search.html">
+
+                            Search Profiles
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Interests -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="interests.html">
+
+                            Interests
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Messages -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="messages.html">
+
+                            Messages
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Notifications -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link position-relative"
+                            href="notifications.html">
+
+                            Notifications
+
+                            <span class="notification-count">
+                                4
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Saved -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="saved-profiles.html">
+
+                            Saved
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Settings -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="account-settings.html"
+                            aria-current="page">
+
+                            Settings
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- My Profile -->
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a
+                            class="btn btn-outline-brand"
+                            href="profile.html">
+
+                            My Profile
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="report-history-section py-5">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-10">
+
+
+                        <!-- ================= BACK ================= -->
+
+                        <a
+                            href="account-settings.html"
+                            class="back-link">
+
+                            ← Back to Account Settings
+
+                        </a>
+
+
+
+                        <!-- ================= HEADING ================= -->
+
+                        <div class="mt-4 mb-4">
+
+                            <h1>
+                                Report History
+                            </h1>
+
+
+                            <p class="text-muted mb-0">
+
+                                View safety reports you have submitted
+                                to KaiBandham administrators and check
+                                their current status.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- ================= IMPORTANT ================= -->
+
+                        <div
+                            class="alert alert-light border mb-4"
+                            role="note">
+
+                            <h2 class="h6 fw-bold">
+                                How Reports Work
+                            </h2>
+
+
+                            <p class="mb-2">
+
+                                Reporting a member does not automatically
+                                warn, suspend, remove or otherwise punish
+                                their account.
+
+                            </p>
+
+
+                            <p class="mb-2">
+
+                                Multiple reports also do not automatically
+                                result in punishment.
+
+                                KaiBandham administrators review the
+                                available information before deciding
+                                whether any action is required.
+
+                            </p>
+
+
+                            <p class="mb-0">
+
+                                Report status is managed by KaiBandham
+                                administrators.
+
+                                Members cannot change the report status
+                                themselves.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- ================= PRIVACY NOTE ================= -->
+
+                        <div
+                            class="alert alert-light border mb-4"
+                            role="note">
+
+                            <strong>
+                                Report Privacy
+                            </strong>
+
+
+                            <p class="mb-0 mt-2">
+
+                                You can see the current status and
+                                general outcome of reports you submitted.
+
+                                Private administrator notes,
+                                investigation details and another
+                                member's private account information
+                                are not shown here.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- ================= SUMMARY ================= -->
+
+                        <div class="row g-3 mb-4">
+
+
+                            <!-- Total -->
+
+                            <div class="col-6 col-lg-3">
+
+                                <div class="report-summary-card">
+
+                                    <span>
+                                        Total Reports
+                                    </span>
+
+                                    <strong id="totalReportCount">
+                                        3
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Pending -->
+
+                            <div class="col-6 col-lg-3">
+
+                                <div class="report-summary-card">
+
+                                    <span>
+                                        Pending
+                                    </span>
+
+                                    <strong id="pendingReportCount">
+                                        0
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Under Review -->
+
+                            <div class="col-6 col-lg-3">
+
+                                <div class="report-summary-card">
+
+                                    <span>
+                                        Under Review
+                                    </span>
+
+                                    <strong id="reviewReportCount">
+                                        1
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Resolved -->
+
+                            <div class="col-6 col-lg-3">
+
+                                <div class="report-summary-card">
+
+                                    <span>
+                                        Resolved
+                                    </span>
+
+                                    <strong id="resolvedReportCount">
+                                        2
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ================= STATUS EXPLANATION ================= -->
+
+                        <div class="admin-card mb-4">
+
+                            <h2 class="h5">
+                                Report Status
+                            </h2>
+
+
+                            <div class="row g-3">
+
+
+                                <!-- Pending -->
+
+                                <div class="col-md-4">
+
+                                    <div class="border rounded p-3 h-100">
+
+                                        <span class="status-badge status-pending">
+
+                                            Pending
+
+                                        </span>
+
+
+                                        <p class="mb-0 mt-2">
+
+                                            Your report has been submitted
+                                            and is waiting for administrator
+                                            review.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Under Review -->
+
+                                <div class="col-md-4">
+
+                                    <div class="border rounded p-3 h-100">
+
+                                        <span class="status-badge status-review">
+
+                                            Under Review
+
+                                        </span>
+
+
+                                        <p class="mb-0 mt-2">
+
+                                            An administrator is reviewing
+                                            the report and relevant
+                                            information.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Resolved -->
+
+                                <div class="col-md-4">
+
+                                    <div class="border rounded p-3 h-100">
+
+                                        <span class="status-badge status-resolved">
+
+                                            Resolved
+
+                                        </span>
+
+
+                                        <p class="mb-0 mt-2">
+
+                                            The administrator has completed
+                                            the review.
+
+                                            A general outcome may be shown
+                                            below.
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ==================================================
+                             REPORT 1
+                        =================================================== -->
+
+                        <article
+                            class="report-history-card mb-3"
+                            data-report-history
+                            data-report-status="review"
+                            data-report-id="RP1001">
+
+
+                            <!-- Header -->
+
+                            <div class="report-history-header">
+
+
+                                <div>
+
+                                    <span class="report-id">
+
+                                        Report ID: RP1001
+
+                                    </span>
+
+
+                                    <h2>
+
+                                        Reported Profile: KB1025
+
+                                    </h2>
+
+                                </div>
+
+
+
+                                <span class="status-badge status-review">
+
+                                    Under Review
+
+                                </span>
+
+
+                            </div>
+
+
+
+                            <!-- Details -->
+
+                            <div class="report-history-details">
+
+
+                                <p>
+
+                                    <strong>
+                                        Reason:
+                                    </strong>
+
+                                    Fake Profile
+
+                                </p>
+
+
+                                <p>
+
+                                    <strong>
+                                        Date Submitted:
+                                    </strong>
+
+                                    7 September 2026
+
+                                </p>
+
+
+                                <p>
+
+                                    <strong>
+                                        Your Report Details:
+                                    </strong>
+
+                                    Some profile information appears
+                                    inconsistent.
+
+                                </p>
+
+
+                            </div>
+
+
+
+                            <!-- Admin Update -->
+
+                            <div class="report-admin-response">
+
+                                <strong>
+                                    Admin Update:
+                                </strong>
+
+
+                                <p class="mb-0">
+
+                                    Your report is currently being reviewed.
+
+                                    You will receive a notification
+                                    when the report status changes.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- Action -->
+
+                            <div class="mt-3">
+
+                                <a
+                                    href="view-profile.html?id=KB1025"
+                                    class="btn btn-outline-brand btn-sm">
+
+                                    View Reported Profile
+
+                                </a>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- ==================================================
+                             REPORT 2
+                        =================================================== -->
+
+                        <article
+                            class="report-history-card mb-3"
+                            data-report-history
+                            data-report-status="resolved"
+                            data-report-id="RP0992">
+
+
+                            <!-- Header -->
+
+                            <div class="report-history-header">
+
+
+                                <div>
+
+                                    <span class="report-id">
+
+                                        Report ID: RP0992
+
+                                    </span>
+
+
+                                    <h2>
+
+                                        Reported Profile: KB0971
+
+                                    </h2>
+
+                                </div>
+
+
+
+                                <span class="status-badge status-resolved">
+
+                                    Resolved
+
+                                </span>
+
+
+                            </div>
+
+
+
+                            <!-- Details -->
+
+                            <div class="report-history-details">
+
+
+                                <p>
+
+                                    <strong>
+                                        Reason:
+                                    </strong>
+
+                                    Inappropriate Behaviour
+
+                                </p>
+
+
+                                <p>
+
+                                    <strong>
+                                        Date Submitted:
+                                    </strong>
+
+                                    25 August 2026
+
+                                </p>
+
+
+                                <p>
+
+                                    <strong>
+                                        Outcome:
+                                    </strong>
+
+                                    Admin Action Taken
+
+                                </p>
+
+
+                            </div>
+
+
+
+                            <!-- General Response -->
+
+                            <div class="report-admin-response">
+
+                                <strong>
+                                    General Outcome
+                                </strong>
+
+
+                                <p class="mb-0">
+
+                                    The report was reviewed and
+                                    appropriate action was taken
+                                    according to KaiBandham rules.
+
+                                    Private account-action details
+                                    are not shown.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- Action -->
+
+                            <div class="mt-3">
+
+                                <a
+                                    href="view-profile.html?id=KB0971"
+                                    class="btn btn-outline-brand btn-sm">
+
+                                    View Reported Profile
+
+                                </a>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- ==================================================
+                             REPORT 3
+                        =================================================== -->
+
+                        <article
+                            class="report-history-card mb-3"
+                            data-report-history
+                            data-report-status="resolved"
+                            data-report-id="RP0978">
+
+
+                            <!-- Header -->
+
+                            <div class="report-history-header">
+
+
+                                <div>
+
+                                    <span class="report-id">
+
+                                        Report ID: RP0978
+
+                                    </span>
+
+
+                                    <h2>
+
+                                        Reported Profile: KB0843
+
+                                    </h2>
+
+                                </div>
+
+
+
+                                <span class="status-badge status-resolved">
+
+                                    Resolved
+
+                                </span>
+
+
+                            </div>
+
+
+
+                            <!-- Details -->
+
+                            <div class="report-history-details">
+
+
+                                <p>
+
+                                    <strong>
+                                        Reason:
+                                    </strong>
+
+                                    False Information
+
+                                </p>
+
+
+                                <p>
+
+                                    <strong>
+                                        Date Submitted:
+                                    </strong>
+
+                                    11 August 2026
+
+                                </p>
+
+
+                                <p>
+
+                                    <strong>
+                                        Outcome:
+                                    </strong>
+
+                                    No Violation Found
+
+                                </p>
+
+
+                            </div>
+
+
+
+                            <!-- General Response -->
+
+                            <div class="report-admin-response">
+
+                                <strong>
+                                    General Outcome
+                                </strong>
+
+
+                                <p class="mb-0">
+
+                                    The profile was reviewed.
+
+                                    No KaiBandham rule violation
+                                    was confirmed, so the report
+                                    was resolved without account action.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- Action -->
+
+                            <div class="mt-3">
+
+                                <a
+                                    href="view-profile.html?id=KB0843"
+                                    class="btn btn-outline-brand btn-sm">
+
+                                    View Reported Profile
+
+                                </a>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- ================= EMPTY STATE ================= -->
+
+                        <div
+                            id="reportHistoryEmpty"
+                            class="text-center border rounded p-5 d-none">
+
+
+                            <div class="fs-1 mb-3">
+
+                                ✓
+
+                            </div>
+
+
+                            <h2>
+                                No Reports
+                            </h2>
+
+
+                            <p class="text-muted">
+
+                                You have not submitted
+                                any safety reports.
+
+                            </p>
+
+
+                            <a
+                                href="search.html"
+                                class="btn btn-brand">
+
+                                Search Profiles
+
+                            </a>
+
+
+                        </div>
+
+
+
+                        <!-- ================= REPORT HELP ================= -->
+
+                        <div class="report-help-card mt-4">
+
+                            <h2>
+                                Need to Report Another Member?
+                            </h2>
+
+
+                            <p>
+
+                                Open the member's profile and choose
+
+                                <strong>
+                                    Report Profile
+                                </strong>
+
+                                for a serious safety concern such as:
+
+                            </p>
+
+
+                            <ul>
+
+                                <li>
+                                    Fake Profile
+                                </li>
+
+                                <li>
+                                    Scam / Fraud
+                                </li>
+
+                                <li>
+                                    Harassment
+                                </li>
+
+                                <li>
+                                    Inappropriate Photo
+                                </li>
+
+                                <li>
+                                    False Information
+                                </li>
+
+                                <li>
+                                    Inappropriate Behaviour
+                                </li>
+
+                                <li>
+                                    Other serious safety concern
+                                </li>
+
+                            </ul>
+
+
+                            <a
+                                href="search.html"
+                                class="btn btn-outline-danger">
+
+                                Find Profile
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- ================= BLOCK VS REPORT ================= -->
+
+                        <div
+                            class="alert alert-light border mt-4"
+                            role="note">
+
+                            <h2 class="h6 fw-bold">
+
+                                Block Contact and Report Profile
+                                Are Different
+
+                            </h2>
+
+
+                            <p class="mb-2">
+
+                                <strong>
+                                    Block Contact
+                                </strong>
+
+                                is a personal privacy action.
+
+                                It stops contact but does not create
+                                an administrator report or punishment.
+
+                            </p>
+
+
+                            <p class="mb-0">
+
+                                <strong>
+                                    Report Profile
+                                </strong>
+
+                                sends a safety concern to
+                                KaiBandham administrators for review.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- ================= SUPPORT HELP ================= -->
+
+                        <div class="alert alert-light border mt-4">
+
+
+                            <h2 class="h6 fw-bold">
+                                Need Help With Something Else?
+                            </h2>
+
+
+                            <p class="mb-3">
+
+                                For account, profile, privacy,
+                                messages, interests, WhatsApp contact
+                                or technical problems, use
+                                KaiBandham Support instead of
+                                Report Profile.
+
+                            </p>
+
+
+                            <a
+                                href="contact.html"
+                                class="btn btn-brand">
+
+                                Contact Support
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+
+                KaiBandham — Accessible Matrimony for the Deaf Community in Kerala
+
+            </p>
+
+
+            <p class="mb-0">
+
+                &copy; 2026 KaiBandham.
+                All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Shared Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

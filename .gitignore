@@ -1,0 +1,10 @@
+# Private image
+images/test pic.jpg
+
+# Private configuration
+.env
+
+# Python environment
+venv/
+.venv/
+__pycache__/

@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Manage your KaiBandham matrimony interests.">
+
+    <title>Interests | KaiBandham</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Open navigation menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- Logged-in Navigation -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="search.html">
+
+                            Search Profiles
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="interests.html"
+                            aria-current="page">
+
+                            Interests
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="messages.html">
+
+                            Messages
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link position-relative"
+                            href="notifications.html">
+
+                            Notifications
+
+                            <span class="notification-count">
+                                4
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="saved-profiles.html">
+
+                            Saved
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="account-settings.html">
+
+                            Settings
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a
+                            class="btn btn-outline-brand"
+                            href="profile.html">
+
+                            My Profile
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="interests-section py-5">
+
+            <div class="container">
+
+
+                <!-- ================= HEADING ================= -->
+
+                <div class="text-center mb-4">
+
+                    <h1>
+                        My Interests
+                    </h1>
+
+                    <p class="text-muted mb-0">
+
+                        Manage received, sent and accepted
+                        marriage interests.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= INFORMATION ================= -->
+
+                <div
+                    class="alert alert-light border mb-4"
+                    role="note">
+
+                    <strong>
+                        How Interests Work
+                    </strong>
+
+                    <p class="mb-2 mt-2">
+
+                        KaiBandham text messaging becomes available
+                        only after an interest is accepted.
+
+                    </p>
+
+                    <p class="mb-0">
+
+                        Personal WhatsApp numbers are not shared
+                        from this page.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- WhatsApp Rule -->
+
+                <div
+                    class="alert alert-light border mb-5"
+                    role="note">
+
+                    <strong>
+                        After an Interest Is Accepted
+                    </strong>
+
+                    <p class="mb-0 mt-2">
+
+                        Use KaiBandham Text Chat first.
+
+                        A conversation can contain up to
+
+                        <strong>
+                            15 total messages
+                        </strong>
+
+                        between both members.
+
+                        After that, a member may request
+                        Personal WhatsApp.
+
+                        The number remains hidden until
+                        the owner approves the request.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= TABS ================= -->
+
+                <ul
+                    class="nav nav-pills interest-tabs justify-content-center mb-5"
+                    id="interestTabs"
+                    role="tablist">
+
+
+                    <!-- Received -->
+
+                    <li class="nav-item"
+                        role="presentation">
+
+                        <button
+                            class="nav-link active"
+                            id="received-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#received"
+                            type="button"
+                            role="tab"
+                            aria-controls="received"
+                            aria-selected="true">
+
+                            Received
+
+                            <span
+                                id="receivedInterestCount"
+                                class="badge rounded-pill">
+
+                                2
+
+                            </span>
+
+                        </button>
+
+                    </li>
+
+
+
+                    <!-- Sent -->
+
+                    <li class="nav-item"
+                        role="presentation">
+
+                        <button
+                            class="nav-link"
+                            id="sent-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#sent"
+                            type="button"
+                            role="tab"
+                            aria-controls="sent"
+                            aria-selected="false">
+
+                            Sent
+
+                        </button>
+
+                    </li>
+
+
+
+                    <!-- Accepted -->
+
+                    <li class="nav-item"
+                        role="presentation">
+
+                        <button
+                            class="nav-link"
+                            id="accepted-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#accepted"
+                            type="button"
+                            role="tab"
+                            aria-controls="accepted"
+                            aria-selected="false">
+
+                            Accepted
+
+                        </button>
+
+                    </li>
+
+
+                </ul>
+
+
+
+                <!-- ================= TAB CONTENT ================= -->
+
+                <div
+                    class="tab-content"
+                    id="interestTabsContent">
+
+
+
+                    <!-- ==================================================
+                         RECEIVED
+                    =================================================== -->
+
+                    <div
+                        class="tab-pane fade show active"
+                        id="received"
+                        role="tabpanel"
+                        aria-labelledby="received-tab">
+
+
+
+                        <!-- ================= RECEIVED 1 ================= -->
+
+                        <article
+                            class="interest-profile-card mb-4"
+                            data-interest-card
+                            data-profile-id="KB0002">
+
+
+                            <div class="row align-items-center g-4">
+
+
+                                <!-- Photo -->
+
+                                <div class="col-md-3 text-center">
+
+                                    <img
+                                        src="images/profile-placeholder.png"
+                                        alt="Profile photo for Anjali"
+                                        class="interest-profile-photo">
+
+                                </div>
+
+
+
+                                <!-- Details -->
+
+                                <div class="col-md-6">
+
+
+                                    <div
+                                        class="d-flex
+                                               align-items-start
+                                               justify-content-between
+                                               gap-3">
+
+
+                                        <div>
+
+                                            <h2 class="interest-name">
+                                                Anjali
+                                            </h2>
+
+                                            <p class="profile-number">
+                                                Profile ID: KB0002
+                                            </p>
+
+                                        </div>
+
+
+                                        <span class="verified-badge">
+                                            ✓ Approved
+                                        </span>
+
+
+                                    </div>
+
+
+
+                                    <!-- Tags -->
+
+                                    <div class="interest-tags mb-3">
+
+                                        <span>
+                                            26 Years
+                                        </span>
+
+                                        <span>
+                                            Ernakulam
+                                        </span>
+
+                                        <span>
+                                            Christian
+                                        </span>
+
+                                        <span>
+                                            Never Married
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <p class="mb-1">
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Indian Sign Language (ISL)
+
+                                    </p>
+
+
+                                    <p class="mb-1">
+
+                                        <strong>
+                                            Education:
+                                        </strong>
+
+                                        Bachelor's Degree
+
+                                    </p>
+
+
+                                    <p class="mb-0">
+
+                                        <strong>
+                                            Occupation:
+                                        </strong>
+
+                                        Designer
+
+                                    </p>
+
+
+                                </div>
+
+
+
+                                <!-- Actions -->
+
+                                <div class="col-md-3">
+
+                                    <div class="d-grid gap-2">
+
+
+                                        <a
+                                            href="view-profile.html?id=KB0002"
+                                            class="btn btn-outline-brand">
+
+                                            View Profile
+
+                                        </a>
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-brand accept-interest">
+
+                                            Accept
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-secondary decline-interest">
+
+                                            Decline
+
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- Status -->
+
+                            <div
+                                class="interest-status-message alert d-none mt-4 mb-0"
+                                role="status">
+                            </div>
+
+
+
+                            <!-- Messages After Acceptance -->
+
+                            <div
+                                class="accepted-message-area d-none mt-3">
+
+                                <div
+                                    class="alert alert-light border mb-3"
+                                    role="note">
+
+                                    <strong>
+                                        Interest Accepted
+                                    </strong>
+
+                                    <p class="mb-0 mt-2">
+
+                                        You can now use KaiBandham
+                                        Text Chat with this member.
+
+                                        Personal WhatsApp remains private.
+
+                                    </p>
+
+                                </div>
+
+
+                                <a
+                                    href="messages.html?profile=KB0002"
+                                    class="btn btn-brand">
+
+                                    💬 Open Messages
+
+                                </a>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- ================= RECEIVED 2 ================= -->
+
+                        <article
+                            class="interest-profile-card mb-4"
+                            data-interest-card
+                            data-profile-id="KB0005">
+
+
+                            <div class="row align-items-center g-4">
+
+
+                                <!-- Photo -->
+
+                                <div class="col-md-3 text-center">
+
+                                    <img
+                                        src="images/profile-placeholder.png"
+                                        alt="Profile photo for Fathima"
+                                        class="interest-profile-photo">
+
+                                </div>
+
+
+
+                                <!-- Details -->
+
+                                <div class="col-md-6">
+
+
+                                    <div
+                                        class="d-flex
+                                               align-items-start
+                                               justify-content-between
+                                               gap-3">
+
+
+                                        <div>
+
+                                            <h2 class="interest-name">
+                                                Fathima
+                                            </h2>
+
+                                            <p class="profile-number">
+                                                Profile ID: KB0005
+                                            </p>
+
+                                        </div>
+
+
+                                        <span class="verified-badge">
+                                            ✓ Approved
+                                        </span>
+
+
+                                    </div>
+
+
+
+                                    <div class="interest-tags mb-3">
+
+                                        <span>
+                                            27 Years
+                                        </span>
+
+                                        <span>
+                                            Malappuram
+                                        </span>
+
+                                        <span>
+                                            Muslim
+                                        </span>
+
+                                        <span>
+                                            Never Married
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <p class="mb-1">
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Speech / Spoken Language
+
+                                    </p>
+
+
+                                    <p class="mb-0">
+
+                                        <strong>
+                                            Preferred Communication:
+                                        </strong>
+
+                                        WhatsApp Text
+
+                                    </p>
+
+
+                                </div>
+
+
+
+                                <!-- Actions -->
+
+                                <div class="col-md-3">
+
+                                    <div class="d-grid gap-2">
+
+
+                                        <a
+                                            href="view-profile.html?id=KB0005"
+                                            class="btn btn-outline-brand">
+
+                                            View Profile
+
+                                        </a>
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-brand accept-interest">
+
+                                            Accept
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-secondary decline-interest">
+
+                                            Decline
+
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- Status -->
+
+                            <div
+                                class="interest-status-message alert d-none mt-4 mb-0"
+                                role="status">
+                            </div>
+
+
+
+                            <!-- Messages After Acceptance -->
+
+                            <div
+                                class="accepted-message-area d-none mt-3">
+
+                                <div
+                                    class="alert alert-light border mb-3"
+                                    role="note">
+
+                                    <strong>
+                                        Interest Accepted
+                                    </strong>
+
+                                    <p class="mb-0 mt-2">
+
+                                        You can now use KaiBandham
+                                        Text Chat with this member.
+
+                                        Personal WhatsApp remains private.
+
+                                    </p>
+
+                                </div>
+
+
+                                <a
+                                    href="messages.html?profile=KB0005"
+                                    class="btn btn-brand">
+
+                                    💬 Open Messages
+
+                                </a>
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         SENT
+                    =================================================== -->
+
+                    <div
+                        class="tab-pane fade"
+                        id="sent"
+                        role="tabpanel"
+                        aria-labelledby="sent-tab">
+
+
+
+                        <!-- Pending Sent Interest -->
+
+                        <article
+                            class="interest-profile-card mb-4"
+                            data-sent-interest-card
+                            data-profile-id="KB0010">
+
+
+                            <div class="row align-items-center g-4">
+
+
+                                <!-- Photo -->
+
+                                <div class="col-md-3 text-center">
+
+                                    <img
+                                        src="images/profile-placeholder.png"
+                                        alt="Profile photo for Meera"
+                                        class="interest-profile-photo">
+
+                                </div>
+
+
+
+                                <!-- Details -->
+
+                                <div class="col-md-6">
+
+                                    <h2 class="interest-name">
+                                        Meera
+                                    </h2>
+
+
+                                    <p class="profile-number">
+                                        Profile ID: KB0010
+                                    </p>
+
+
+                                    <div class="interest-tags mb-3">
+
+                                        <span>
+                                            25 Years
+                                        </span>
+
+                                        <span>
+                                            Thrissur
+                                        </span>
+
+                                        <span>
+                                            Hindu
+                                        </span>
+
+                                    </div>
+
+
+                                    <p class="mb-1">
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Indian Sign Language (ISL)
+
+                                    </p>
+
+
+                                    <p class="mb-0">
+
+                                        <strong>
+                                            Interest Sent:
+                                        </strong>
+
+                                        7 September 2026
+
+                                    </p>
+
+                                </div>
+
+
+
+                                <!-- Actions -->
+
+                                <div class="col-md-3">
+
+                                    <div class="d-grid gap-2">
+
+
+                                        <span
+                                            class="interest-status pending-status">
+
+                                            Pending
+
+                                        </span>
+
+
+                                        <a
+                                            href="view-profile.html?id=KB0010"
+                                            class="btn btn-outline-brand">
+
+                                            View Profile
+
+                                        </a>
+
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-secondary cancel-interest">
+
+                                            Cancel Interest
+
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div
+                                class="sent-interest-status alert d-none mt-4 mb-0"
+                                role="status">
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- Declined Sent Example -->
+
+                        <article class="interest-profile-card mb-4">
+
+
+                            <div class="row align-items-center g-4">
+
+
+                                <div class="col-md-3 text-center">
+
+                                    <img
+                                        src="images/profile-placeholder.png"
+                                        alt="Profile photo for Arun"
+                                        class="interest-profile-photo">
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <h2 class="interest-name">
+                                        Arun
+                                    </h2>
+
+
+                                    <p class="profile-number">
+                                        Profile ID: KB0012
+                                    </p>
+
+
+                                    <div class="interest-tags mb-3">
+
+                                        <span>
+                                            30 Years
+                                        </span>
+
+                                        <span>
+                                            Kottayam
+                                        </span>
+
+                                        <span>
+                                            Christian
+                                        </span>
+
+                                    </div>
+
+
+                                    <p class="mb-0">
+
+                                        <strong>
+                                            Status:
+                                        </strong>
+
+                                        Interest Declined
+
+                                    </p>
+
+                                </div>
+
+
+                                <div class="col-md-3">
+
+                                    <div class="d-grid gap-2">
+
+
+                                        <span class="interest-status">
+
+                                            Declined
+
+                                        </span>
+
+
+                                        <a
+                                            href="view-profile.html?id=KB0012"
+                                            class="btn btn-outline-brand">
+
+                                            View Profile
+
+                                        </a>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div
+                                class="alert alert-light border mt-4 mb-0"
+                                role="note">
+
+                                Declining an interest is a personal
+                                matrimony decision.
+
+                                It does not block, report, warn or
+                                punish either member.
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         ACCEPTED
+                    =================================================== -->
+
+                    <div
+                        class="tab-pane fade"
+                        id="accepted"
+                        role="tabpanel"
+                        aria-labelledby="accepted-tab">
+
+
+
+                        <article
+                            class="interest-profile-card mb-4"
+                            data-profile-id="KB0002">
+
+
+                            <div class="row align-items-center g-4">
+
+
+                                <!-- Photo -->
+
+                                <div class="col-md-3 text-center">
+
+                                    <img
+                                        src="images/profile-placeholder.png"
+                                        alt="Profile photo for Anjali"
+                                        class="interest-profile-photo">
+
+                                </div>
+
+
+
+                                <!-- Details -->
+
+                                <div class="col-md-6">
+
+
+                                    <h2 class="interest-name">
+                                        Anjali
+                                    </h2>
+
+
+                                    <p class="profile-number">
+                                        Profile ID: KB0002
+                                    </p>
+
+
+                                    <div class="interest-tags mb-3">
+
+                                        <span>
+                                            26 Years
+                                        </span>
+
+                                        <span>
+                                            Ernakulam
+                                        </span>
+
+                                        <span>
+                                            Christian
+                                        </span>
+
+                                    </div>
+
+
+                                    <p class="mb-2">
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Indian Sign Language (ISL)
+
+                                    </p>
+
+
+                                    <span
+                                        class="interest-status accepted-status">
+
+                                        ✓ Interest Accepted
+
+                                    </span>
+
+
+
+                                    <!-- Communication Note -->
+
+                                    <div
+                                        class="accepted-privacy-note mt-3">
+
+                                        <strong>
+                                            Communication
+                                        </strong>
+
+
+                                        <p class="mb-0 mt-1">
+
+                                            You can now use KaiBandham
+                                            Text Chat.
+
+                                            The conversation has a maximum
+                                            of
+
+                                            <strong>
+                                                15 total messages
+                                            </strong>
+
+                                            between both members.
+
+                                            After 15 total messages,
+                                            either eligible member may
+                                            request Personal WhatsApp.
+
+                                            WhatsApp remains hidden until
+                                            the owner approves the request.
+
+                                        </p>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- Actions -->
+
+                                <div class="col-md-3">
+
+                                    <div class="d-grid gap-2">
+
+
+                                        <a
+                                            href="view-profile.html?id=KB0002"
+                                            class="btn btn-outline-brand">
+
+                                            View Profile
+
+                                        </a>
+
+
+                                        <a
+                                            href="messages.html?profile=KB0002"
+                                            class="btn btn-brand">
+
+                                            💬 Open Messages
+
+                                        </a>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+
+                KaiBandham — Accessible Matrimony for the Deaf Community in Kerala
+
+            </p>
+
+
+            <p class="mb-0">
+
+                &copy; 2026 KaiBandham.
+                All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

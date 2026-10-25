@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Create your KaiBandham matrimony profile.">
+
+    <title>Create Profile | KaiBandham</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar bg-white shadow-sm">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+            <!-- Member Actions -->
+
+            <div class="d-flex gap-2 flex-wrap">
+
+                <a
+                    href="account-settings.html"
+                    class="btn btn-outline-brand">
+
+                    Settings
+
+                </a>
+
+                <a
+                    href="login.html"
+                    class="btn btn-outline-secondary">
+
+                    Logout
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+        <section class="profile-form-section py-5">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-9">
+
+
+                        <div class="profile-form-card">
+
+
+                            <!-- ================= HEADING ================= -->
+
+                            <div class="text-center mb-4">
+
+                                <h1>
+                                    Create Your Matrimony Profile
+                                </h1>
+
+                                <p class="text-muted mb-0">
+
+                                    Add your information to create
+                                    your KaiBandham matrimony profile.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- ================= APPROVAL INFO ================= -->
+
+                            <div
+                                class="alert alert-light border mb-5"
+                                role="note">
+
+                                <h2 class="h6 fw-bold">
+                                    Profile Review
+                                </h2>
+
+                                <p class="mb-2">
+
+                                    Your profile will not become
+                                    publicly visible immediately.
+
+                                </p>
+
+                                <p class="mb-0">
+
+                                    After submission, the status becomes
+
+                                    <strong>
+                                        Pending Review
+                                    </strong>.
+
+                                    A KaiBandham administrator will
+                                    review it and either mark it
+
+                                    <strong>
+                                        Approved
+                                    </strong>
+
+                                    or
+
+                                    <strong>
+                                        Changes Required
+                                    </strong>.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- ================= FORM ================= -->
+
+                            <form
+                                id="profileForm"
+                                enctype="multipart/form-data"
+                                novalidate>
+
+
+
+                                <!-- ==================================================
+                                     PERSONAL INFORMATION
+                                =================================================== -->
+
+                                <h2 class="form-section-title">
+                                    Personal Information
+                                </h2>
+
+
+                                <div class="row">
+
+
+                                    <!-- Full Name -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="profileName"
+                                            class="form-label">
+
+                                            Full Name *
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="profileName"
+                                            name="profileName"
+                                            maxlength="100"
+                                            autocomplete="name"
+                                            required>
+
+                                    </div>
+
+
+
+                                    <!-- Date of Birth -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="dob"
+                                            class="form-label">
+
+                                            Date of Birth *
+
+                                        </label>
+
+                                        <input
+                                            type="date"
+                                            class="form-control"
+                                            id="dob"
+                                            name="dob"
+                                            required>
+
+                                        <div class="form-text">
+
+                                            KaiBandham is for members
+                                            aged 18 or older.
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Gender -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="gender"
+                                            class="form-label">
+
+                                            Gender *
+
+                                        </label>
+
+                                        <select
+                                            id="gender"
+                                            name="gender"
+                                            class="form-select"
+                                            required>
+
+                                            <option value="">
+                                                Select Gender
+                                            </option>
+
+                                            <option value="male">
+                                                Male
+                                            </option>
+
+                                            <option value="female">
+                                                Female
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+
+                                    <!-- Religion -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="religion"
+                                            class="form-label">
+
+                                            Religion *
+
+                                        </label>
+
+                                        <select
+                                            id="religion"
+                                            name="religion"
+                                            class="form-select"
+                                            required>
+
+                                            <option value="">
+                                                Select Religion
+                                            </option>
+
+                                            <option value="hindu">
+                                                Hindu
+                                            </option>
+
+                                            <option value="muslim">
+                                                Muslim
+                                            </option>
+
+                                            <option value="christian">
+                                                Christian
+                                            </option>
+
+                                            <option value="other">
+                                                Other
+                                            </option>
+
+                                            <option value="prefer-not">
+                                                Prefer not to say
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+
+                                    <!-- Marital Status -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="maritalStatus"
+                                            class="form-label">
+
+                                            Marital Status *
+
+                                        </label>
+
+                                        <select
+                                            id="maritalStatus"
+                                            name="maritalStatus"
+                                            class="form-select"
+                                            required>
+
+                                            <option value="">
+                                                Select Status
+                                            </option>
+
+                                            <option value="never-married">
+                                                Never Married
+                                            </option>
+
+                                            <option value="divorced">
+                                                Divorced
+                                            </option>
+
+                                            <option value="widowed">
+                                                Widowed
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     CONTACT INFORMATION
+                                =================================================== -->
+
+                                <h2 class="form-section-title mt-5">
+                                    Contact Information
+                                </h2>
+
+
+                                <p class="text-muted">
+
+                                    Personal WhatsApp and Family Contact
+                                    are separate.
+
+                                    Your Personal WhatsApp number is
+                                    hidden from other members by default.
+
+                                </p>
+
+
+                                <div class="row">
+
+
+                                    <!-- Personal WhatsApp -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="personalWhatsapp"
+                                            class="form-label">
+
+                                            Personal WhatsApp Number *
+
+                                        </label>
+
+                                        <input
+                                            type="tel"
+                                            class="form-control"
+                                            id="personalWhatsapp"
+                                            name="personalWhatsapp"
+                                            placeholder="Example: +91 98765 43210"
+                                            autocomplete="tel"
+                                            required>
+
+
+                                        <div class="form-text">
+
+                                            Your number is not automatically
+                                            revealed to another member.
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Personal Contact Method -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="personalContactMethod"
+                                            class="form-label">
+
+                                            Personal Contact Method
+
+                                        </label>
+
+                                        <select
+                                            id="personalContactMethod"
+                                            name="personalContactMethod"
+                                            class="form-select">
+
+                                            <option
+                                                value="whatsapp"
+                                                selected>
+
+                                                WhatsApp Text
+
+                                            </option>
+
+                                            <option value="sms">
+                                                SMS / Text
+                                            </option>
+
+                                            <option value="website-chat">
+                                                KaiBandham Text Chat
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+
+                                    <!-- Family Name -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="familyContactName"
+                                            class="form-label">
+
+                                            Family Contact Name
+
+                                            <span class="text-muted">
+                                                (Optional)
+                                            </span>
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="familyContactName"
+                                            name="familyContactName"
+                                            maxlength="100"
+                                            placeholder="Example: Abdul Rahman">
+
+                                    </div>
+
+
+
+                                    <!-- Relationship -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="familyRelationship"
+                                            class="form-label">
+
+                                            Relationship
+
+                                        </label>
+
+                                        <select
+                                            id="familyRelationship"
+                                            name="familyRelationship"
+                                            class="form-select">
+
+                                            <option value="">
+                                                Select Relationship
+                                            </option>
+
+                                            <option value="father">
+                                                Father
+                                            </option>
+
+                                            <option value="mother">
+                                                Mother
+                                            </option>
+
+                                            <option value="brother">
+                                                Brother
+                                            </option>
+
+                                            <option value="sister">
+                                                Sister
+                                            </option>
+
+                                            <option value="guardian">
+                                                Guardian
+                                            </option>
+
+                                            <option value="relative">
+                                                Other Relative
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+
+                                    <!-- Family Number -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="familyPhone"
+                                            class="form-label">
+
+                                            Family Contact Number
+
+                                        </label>
+
+                                        <input
+                                            type="tel"
+                                            class="form-control"
+                                            id="familyPhone"
+                                            name="familyPhone"
+                                            placeholder="Example: +91 98765 43210">
+
+                                    </div>
+
+
+
+                                    <!-- Family Contact Method -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="familyContactMethod"
+                                            class="form-label">
+
+                                            Family Contact Method
+
+                                        </label>
+
+                                        <select
+                                            id="familyContactMethod"
+                                            name="familyContactMethod"
+                                            class="form-select">
+
+                                            <option
+                                                value="voice-call"
+                                                selected>
+
+                                                Voice Call
+
+                                            </option>
+
+                                            <option value="whatsapp">
+                                                WhatsApp
+                                            </option>
+
+                                            <option value="sms">
+                                                SMS / Text
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     LOCATION
+                                =================================================== -->
+
+                                <h2 class="form-section-title mt-5">
+                                    Location in Kerala
+                                </h2>
+
+
+                                <p class="text-muted">
+
+                                    KaiBandham currently supports
+                                    matrimony profiles from Kerala only.
+
+                                </p>
+
+
+                                <div class="row">
+
+
+                                    <!-- District -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="district"
+                                            class="form-label">
+
+                                            District *
+
+                                        </label>
+
+                                        <select
+                                            id="district"
+                                            name="district"
+                                            class="form-select"
+                                            required>
+
+                                            <option value="">
+                                                Select District
+                                            </option>
+
+                                            <option value="thiruvananthapuram">
+                                                Thiruvananthapuram
+                                            </option>
+
+                                            <option value="kollam">
+                                                Kollam
+                                            </option>
+
+                                            <option value="pathanamthitta">
+                                                Pathanamthitta
+                                            </option>
+
+                                            <option value="alappuzha">
+                                                Alappuzha
+                                            </option>
+
+                                            <option value="kottayam">
+                                                Kottayam
+                                            </option>
+
+                                            <option value="idukki">
+                                                Idukki
+                                            </option>
+
+                                            <option value="ernakulam">
+                                                Ernakulam
+                                            </option>
+
+                                            <option value="thrissur">
+                                                Thrissur
+                                            </option>
+
+                                            <option value="palakkad">
+                                                Palakkad
+                                            </option>
+
+                                            <option value="malappuram">
+                                                Malappuram
+                                            </option>
+
+                                            <option value="kozhikode">
+                                                Kozhikode
+                                            </option>
+
+                                            <option value="wayanad">
+                                                Wayanad
+                                            </option>
+
+                                            <option value="kannur">
+                                                Kannur
+                                            </option>
+
+                                            <option value="kasaragod">
+                                                Kasaragod
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+
+                                    <!-- Town -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="town"
+                                            class="form-label">
+
+                                            Town / City *
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="town"
+                                            name="town"
+                                            maxlength="100"
+                                            placeholder="Example: Kochi"
+                                            required>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     EDUCATION / OCCUPATION
+                                =================================================== -->
+
+                                <h2 class="form-section-title mt-5">
+                                    Education &amp; Occupation
+                                </h2>
+
+
+                                <div class="row">
+
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="education"
+                                            class="form-label">
+
+                                            Education
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="education"
+                                            name="education"
+                                            maxlength="150"
+                                            placeholder="Example: B.Com">
+
+                                    </div>
+
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="occupation"
+                                            class="form-label">
+
+                                            Occupation
+
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="occupation"
+                                            name="occupation"
+                                            maxlength="150"
+                                            placeholder="Example: Accountant">
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     COMMUNICATION
+                                =================================================== -->
+
+                                <h2 class="form-section-title mt-5">
+                                    Communication
+                                </h2>
+
+
+                                <div class="row">
+
+
+                                    <!-- Communication Method -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="communicationMethod"
+                                            class="form-label">
+
+                                            Communication Method *
+
+                                        </label>
+
+                                        <select
+                                            id="communicationMethod"
+                                            name="communicationMethod"
+                                            class="form-select"
+                                            required>
+
+                                            <option value="">
+                                                Select Communication Method
+                                            </option>
+
+                                            <option value="isl">
+                                                Indian Sign Language (ISL)
+                                            </option>
+
+                                            <option value="speech">
+                                                Speech / Spoken Language
+                                            </option>
+
+                                            <option value="sign-and-speech">
+                                                Sign Language &amp; Speech
+                                            </option>
+
+                                            <option value="other">
+                                                Other
+                                            </option>
+
+                                        </select>
+
+
+                                        <div class="form-text">
+
+                                            How you normally communicate.
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Preferred Communication -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="preferredCommunication"
+                                            class="form-label">
+
+                                            Preferred Communication *
+
+                                        </label>
+
+                                        <select
+                                            id="preferredCommunication"
+                                            name="preferredCommunication"
+                                            class="form-select"
+                                            required>
+
+                                            <option value="">
+                                                Select Preferred Communication
+                                            </option>
+
+                                            <option value="text-chat">
+                                                Text Chat
+                                            </option>
+
+                                            <option value="whatsapp-text">
+                                                WhatsApp Text
+                                            </option>
+
+                                            <option value="email">
+                                                Email
+                                            </option>
+
+                                        </select>
+
+
+                                        <div class="form-text">
+
+                                            How you prefer KaiBandham
+                                            members to contact you.
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     PROFILE PHOTO
+                                =================================================== -->
+
+                                <h2 class="form-section-title mt-5">
+                                    Profile Photo
+                                </h2>
+
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="profilePhoto"
+                                        class="form-label">
+
+                                        Upload Photo
+
+                                        <span class="text-muted">
+                                            (Optional)
+                                        </span>
+
+                                    </label>
+
+                                    <input
+                                        type="file"
+                                        class="form-control"
+                                        id="profilePhoto"
+                                        name="profilePhoto"
+                                        accept="image/jpeg,image/png,image/webp">
+
+
+                                    <div class="form-text">
+
+                                        JPG, PNG or WebP.
+                                        Maximum frontend demo size: 5 MB.
+
+                                        Photo visibility is controlled
+                                        by your privacy setting.
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     ABOUT ME
+                                =================================================== -->
+
+                                <h2 class="form-section-title mt-5">
+                                    About Me
+                                </h2>
+
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="aboutMe"
+                                        class="form-label">
+
+                                        Tell us about yourself
+
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="aboutMe"
+                                        name="aboutMe"
+                                        rows="5"
+                                        maxlength="500"
+                                        placeholder="Write a short introduction about yourself..."></textarea>
+
+
+                                    <div class="form-text">
+                                        Maximum 500 characters.
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     PARTNER PREFERENCE
+                                =================================================== -->
+
+                                <h2 class="form-section-title mt-5">
+                                    Partner Preference
+                                </h2>
+
+
+                                <div class="row">
+
+
+                                    <!-- Min Age -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="minAge"
+                                            class="form-label">
+
+                                            Minimum Age
+
+                                        </label>
+
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="minAge"
+                                            name="minAge"
+                                            min="18"
+                                            max="100">
+
+                                    </div>
+
+
+
+                                    <!-- Max Age -->
+
+                                    <div class="col-md-6 mb-3">
+
+                                        <label
+                                            for="maxAge"
+                                            class="form-label">
+
+                                            Maximum Age
+
+                                        </label>
+
+                                        <input
+                                            type="number"
+                                            class="form-control"
+                                            id="maxAge"
+                                            name="maxAge"
+                                            min="18"
+                                            max="100">
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- Partner Description -->
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="partnerPreference"
+                                        class="form-label">
+
+                                        What are you looking for?
+
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="partnerPreference"
+                                        name="partnerPreference"
+                                        rows="4"
+                                        maxlength="500"
+                                        placeholder="Describe your preferred life partner..."></textarea>
+
+
+                                    <div class="form-text">
+                                        Maximum 500 characters.
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     PRIVACY DEFAULTS
+                                =================================================== -->
+
+                                <h2 class="form-section-title mt-5">
+                                    Privacy Defaults
+                                </h2>
+
+
+                                <p class="text-muted">
+
+                                    These settings control what other
+                                    members can see.
+
+                                    You can change them later from
+                                    Privacy Settings.
+
+                                </p>
+
+
+
+                                <div class="privacy-box mb-4">
+
+
+                                    <!-- Personal WhatsApp -->
+
+                                    <div class="mb-3">
+
+                                        <label
+                                            for="whatsappPrivacy"
+                                            class="form-label">
+
+                                            Personal WhatsApp
+
+                                        </label>
+
+                                        <select
+                                            id="whatsappPrivacy"
+                                            name="whatsappPrivacy"
+                                            class="form-select">
+
+                                            <option
+                                                value="approval"
+                                                selected>
+
+                                                Hidden — Share Only After Approval
+
+                                            </option>
+
+                                            <option value="hidden">
+                                                Always Hidden
+                                            </option>
+
+                                        </select>
+
+
+                                        <div class="form-text">
+
+                                            After 15 total chat messages,
+                                            an accepted member may request
+                                            your WhatsApp.
+
+                                            Your number remains hidden
+                                            until you approve the request.
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- Family Contact -->
+
+                                    <div class="mb-3">
+
+                                        <label
+                                            for="familyPrivacy"
+                                            class="form-label">
+
+                                            Family Contact Number
+
+                                        </label>
+
+                                        <select
+                                            id="familyPrivacy"
+                                            name="familyPrivacy"
+                                            class="form-select">
+
+                                            <option
+                                                value="members"
+                                                selected>
+
+                                                Logged-in KaiBandham Members
+
+                                            </option>
+
+                                            <option value="accepted">
+                                                Accepted Interests Only
+                                            </option>
+
+                                            <option value="hidden">
+                                                Hidden
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+
+                                    <!-- Email -->
+
+                                    <div class="mb-3">
+
+                                        <label
+                                            for="emailPrivacy"
+                                            class="form-label">
+
+                                            Email
+
+                                        </label>
+
+                                        <select
+                                            id="emailPrivacy"
+                                            name="emailPrivacy"
+                                            class="form-select">
+
+                                            <option
+                                                value="hidden"
+                                                selected>
+
+                                                Hidden
+
+                                            </option>
+
+                                            <option value="accepted">
+                                                Accepted Interests Only
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+
+                                    <!-- Photo -->
+
+                                    <div class="mb-0">
+
+                                        <label
+                                            for="photoPrivacy"
+                                            class="form-label">
+
+                                            Profile Photo
+
+                                        </label>
+
+                                        <select
+                                            id="photoPrivacy"
+                                            name="photoPrivacy"
+                                            class="form-select">
+
+                                            <option value="everyone">
+                                                Everyone
+                                            </option>
+
+                                            <option
+                                                value="accepted"
+                                                selected>
+
+                                                Accepted Interests Only
+
+                                            </option>
+
+                                            <option value="nobody">
+                                                Nobody
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     DECLARATION
+                                =================================================== -->
+
+                                <div class="form-check mb-4">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="profileDeclaration"
+                                        required>
+
+
+                                    <label
+                                        class="form-check-label"
+                                        for="profileDeclaration">
+
+                                        I confirm that the information
+                                        I have provided is accurate
+                                        to the best of my knowledge.
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     REVIEW NOTICE
+                                =================================================== -->
+
+                                <div
+                                    class="alert alert-warning"
+                                    role="note">
+
+                                    <strong>
+                                        Before you submit:
+                                    </strong>
+
+                                    <p class="mb-0 mt-2">
+
+                                        Your new profile will be sent
+                                        to a KaiBandham administrator
+                                        for review.
+
+                                        It will remain hidden from
+                                        member search until approved.
+
+                                    </p>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     MESSAGE
+                                =================================================== -->
+
+                                <div
+                                    id="profileMessage"
+                                    class="alert d-none"
+                                    role="status">
+                                </div>
+
+
+
+                                <!-- Status Link After Demo Submit -->
+
+                                <div
+                                    id="profileStatusArea"
+                                    class="d-none mb-3">
+
+                                    <a
+                                        href="profile-status.html"
+                                        class="btn btn-outline-brand">
+
+                                        View Profile Status
+
+                                    </a>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     BUTTONS
+                                =================================================== -->
+
+                                <div class="d-flex gap-3 flex-wrap">
+
+                                    <button
+                                        type="submit"
+                                        id="submitProfileBtn"
+                                        class="btn btn-brand btn-lg">
+
+                                        Submit Profile for Review
+
+                                    </button>
+
+
+                                    <a
+                                        href="account-settings.html"
+                                        class="btn btn-outline-secondary btn-lg">
+
+                                        Cancel
+
+                                    </a>
+
+                                </div>
+
+
+                            </form>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+
+                KaiBandham — Accessible Matrimony for the Deaf Community in Kerala
+
+            </p>
+
+            <p class="mb-0">
+
+                &copy; 2026 KaiBandham.
+                All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

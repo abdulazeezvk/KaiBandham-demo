@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Create your KaiBandham matrimony account.">
+
+    <title>Register | KaiBandham</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar bg-white shadow-sm">
+
+        <div class="container">
+
+
+            <a class="navbar-brand"
+               href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+            <div class="ms-auto">
+
+                <span class="me-2 d-none d-sm-inline">
+
+                    Already have an account?
+
+                </span>
+
+
+                <a
+                    href="login.html"
+                    class="btn btn-outline-brand">
+
+                    Login
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="registration-section py-5">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-7 col-md-9">
+
+
+                        <div class="registration-card">
+
+
+                            <!-- ================= HEADING ================= -->
+
+                            <div class="text-center mb-4">
+
+                                <h1>
+                                    Create Your Account
+                                </h1>
+
+
+                                <p class="text-muted mb-0">
+
+                                    Join KaiBandham and begin your
+                                    journey toward finding a meaningful
+                                    marriage partner in Kerala.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- ================= INFO ================= -->
+
+                            <div
+                                class="alert alert-light border mb-4"
+                                role="note">
+
+                                <h2 class="h6 fw-bold">
+                                    Account First, Profile Next
+                                </h2>
+
+
+                                <p class="mb-0">
+
+                                    Registration creates your
+                                    KaiBandham account.
+
+                                    After login, you can create your
+                                    full matrimony profile with
+                                    education, occupation, religion,
+                                    Communication Method and other
+                                    profile information.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- ================= PRIVACY ================= -->
+
+                            <div class="privacy-notice mb-4">
+
+                                <strong>
+                                    🔒 Your Privacy Matters
+                                </strong>
+
+
+                                <p class="mb-0 mt-1">
+
+                                    Your email address is not publicly
+                                    displayed by default.
+
+                                    Personal WhatsApp and Family Contact
+                                    information can be added later and
+                                    controlled through Privacy Settings.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- ================= FORM ================= -->
+
+                            <form
+                                id="registerForm"
+                                novalidate>
+
+
+                                <!-- Full Name -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="fullName"
+                                        class="form-label">
+
+                                        Full Name
+                                        <span class="required">*</span>
+
+                                    </label>
+
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="fullName"
+                                        name="fullName"
+                                        placeholder="Enter your full name"
+                                        autocomplete="name"
+                                        maxlength="100"
+                                        required>
+
+                                </div>
+
+
+
+                                <!-- Email -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="email"
+                                        class="form-label">
+
+                                        Email Address
+                                        <span class="required">*</span>
+
+                                    </label>
+
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        name="email"
+                                        placeholder="example@email.com"
+                                        autocomplete="email"
+                                        required>
+
+
+                                    <div class="form-text">
+
+                                        Your email is hidden from
+                                        other members by default.
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Password -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="password"
+                                        class="form-label">
+
+                                        Password
+                                        <span class="required">*</span>
+
+                                    </label>
+
+
+                                    <div class="input-group">
+
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                            id="password"
+                                            name="password"
+                                            placeholder="Create a password"
+                                            autocomplete="new-password"
+                                            minlength="8"
+                                            required>
+
+
+                                        <button
+                                            class="btn btn-outline-secondary"
+                                            type="button"
+                                            onclick="togglePassword('password', this)"
+                                            aria-label="Show password">
+
+                                            Show
+
+                                        </button>
+
+                                    </div>
+
+
+                                    <div class="form-text">
+
+                                        Use at least 8 characters.
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Confirm Password -->
+
+                                <div class="mb-4">
+
+                                    <label
+                                        for="confirmPassword"
+                                        class="form-label">
+
+                                        Confirm Password
+                                        <span class="required">*</span>
+
+                                    </label>
+
+
+                                    <div class="input-group">
+
+                                        <input
+                                            type="password"
+                                            class="form-control"
+                                            id="confirmPassword"
+                                            name="confirmPassword"
+                                            placeholder="Enter password again"
+                                            autocomplete="new-password"
+                                            minlength="8"
+                                            required>
+
+
+                                        <button
+                                            class="btn btn-outline-secondary"
+                                            type="button"
+                                            onclick="togglePassword('confirmPassword', this)"
+                                            aria-label="Show confirmed password">
+
+                                            Show
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- 18+ -->
+
+                                <div class="form-check mb-3">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="ageConfirmation"
+                                        required>
+
+
+                                    <label
+                                        class="form-check-label"
+                                        for="ageConfirmation">
+
+                                        I confirm that I am
+                                        18 years old or older.
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <!-- Terms -->
+
+                                <div class="form-check mb-4">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="terms"
+                                        required>
+
+
+                                    <label
+                                        class="form-check-label"
+                                        for="terms">
+
+                                        I agree to the
+
+                                        <a href="terms.html"
+                                           target="_blank"
+                                           rel="noopener">
+
+                                            Terms of Use
+
+                                        </a>
+
+                                        and
+
+                                        <a href="privacy-policy.html"
+                                           target="_blank"
+                                           rel="noopener">
+
+                                            Privacy Policy
+
+                                        </a>.
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <!-- Error -->
+
+                                <div
+                                    id="formMessage"
+                                    class="alert alert-danger d-none"
+                                    role="alert">
+                                </div>
+
+
+
+                                <!-- Success -->
+
+                                <div
+                                    id="registerSuccessMessage"
+                                    class="alert alert-success d-none"
+                                    role="status">
+
+                                    Account created successfully.
+
+                                    You can now continue to login.
+
+                                </div>
+
+
+
+                                <!-- Register -->
+
+                                <button
+                                    type="submit"
+                                    id="registerBtn"
+                                    class="btn btn-brand btn-lg w-100">
+
+                                    Create Account
+
+                                </button>
+
+
+
+                                <!-- Continue Login -->
+
+                                <div
+                                    id="registerLoginArea"
+                                    class="text-center mt-3 d-none">
+
+                                    <a
+                                        href="login.html"
+                                        class="btn btn-outline-brand">
+
+                                        Continue to Login
+
+                                    </a>
+
+                                </div>
+
+
+
+                                <!-- Existing Account -->
+
+                                <p class="text-center mt-4 mb-0">
+
+                                    Already registered?
+
+                                    <a href="login.html">
+
+                                        Login to your account
+
+                                    </a>
+
+                                </p>
+
+
+                            </form>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+
+            <p class="mb-2">
+
+                KaiBandham — Accessible Matrimony for the Deaf Community in Kerala
+
+            </p>
+
+
+            <div class="mb-3">
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="safety.html">
+                    Safety
+                </a>
+
+                <a href="privacy-policy.html">
+                    Privacy
+                </a>
+
+                <a href="terms.html">
+                    Terms
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <p class="mb-0">
+
+                &copy; 2026 KaiBandham.
+                All rights reserved.
+
+            </p>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="View and manage your saved KaiBandham matrimony profiles.">
+
+    <title>Saved Profiles | KaiBandham</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Open navigation menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- Logged-in Navigation -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <!-- Search -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="search.html">
+
+                            Search Profiles
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Interests -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="interests.html">
+
+                            Interests
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Messages -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="messages.html">
+
+                            Messages
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Notifications -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link position-relative"
+                            href="notifications.html">
+
+                            Notifications
+
+                            <span class="notification-count">
+                                4
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Saved -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="saved-profiles.html"
+                            aria-current="page">
+
+                            Saved
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- Settings -->
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="account-settings.html">
+
+                            Settings
+
+                        </a>
+
+                    </li>
+
+
+
+                    <!-- My Profile -->
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a
+                            class="btn btn-outline-brand"
+                            href="profile.html">
+
+                            My Profile
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="saved-profiles-section py-5">
+
+            <div class="container">
+
+
+                <!-- ================= HEADING ================= -->
+
+                <div
+                    class="d-flex
+                           flex-column
+                           flex-md-row
+                           justify-content-between
+                           align-items-md-center
+                           gap-3
+                           mb-4">
+
+
+                    <div>
+
+                        <h1>
+                            Saved Profiles
+                        </h1>
+
+
+                        <p class="text-muted mb-0">
+
+                            Profiles you saved so you can
+                            view them again later.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <a
+                        href="search.html"
+                        class="btn btn-brand">
+
+                        Search More Profiles
+
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- ================= INFORMATION ================= -->
+
+                <div
+                    class="alert alert-light border mb-4"
+                    role="note">
+
+                    <strong>
+                        Saved Profiles
+                    </strong>
+
+                    <p class="mb-0 mt-2">
+
+                        Saving a profile is private.
+
+                        The other member is not notified
+                        when you save or remove their profile.
+
+                        Removing a saved profile does not hide,
+                        block, report or punish the member.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= STATUS MESSAGE ================= -->
+
+                <div
+                    id="savedProfilesMessage"
+                    class="alert d-none"
+                    role="status">
+                </div>
+
+
+
+                <!-- ================= SAVED COUNT ================= -->
+
+                <div class="saved-summary-card mb-4">
+
+                    <span>
+                        ❤️ Saved Profiles
+                    </span>
+
+                    <strong id="savedProfileCount">
+                        3
+                    </strong>
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     SAVED PROFILE LIST
+                =================================================== -->
+
+                <div
+                    class="row g-4"
+                    id="savedProfilesList">
+
+
+
+                    <!-- ================= PROFILE 1 ================= -->
+
+                    <div
+                        class="col-md-6 col-lg-4 saved-profile-item"
+                        data-profile-id="KB0002"
+                        data-profile-name="Anjali">
+
+
+                        <div class="saved-profile-card">
+
+
+                            <!-- Photo -->
+
+                            <div class="saved-profile-image">
+
+                                <img
+                                    src="images/profile-placeholder.png"
+                                    alt="Profile photo for Anjali"
+                                    class="img-fluid">
+
+                            </div>
+
+
+
+                            <!-- Body -->
+
+                            <div class="saved-profile-body">
+
+
+                                <div
+                                    class="d-flex
+                                           justify-content-between
+                                           align-items-start
+                                           gap-2">
+
+
+                                    <div>
+
+                                        <h2>
+                                            Anjali
+                                        </h2>
+
+
+                                        <p class="profile-number mb-2">
+
+                                            Profile ID: KB0002
+
+                                        </p>
+
+
+                                        <span class="approved-badge">
+
+                                            ✓ Approved
+
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <!-- Remove Saved -->
+
+                                    <button
+                                        type="button"
+                                        class="remove-saved-btn"
+                                        aria-label="Remove Anjali from saved profiles"
+                                        title="Remove from Saved">
+
+                                        ♥️
+
+                                    </button>
+
+
+                                </div>
+
+
+
+                                <!-- Details -->
+
+                                <div class="saved-profile-details mt-3">
+
+
+                                    <p>
+
+                                        <strong>
+                                            Age:
+                                        </strong>
+
+                                        26 Years
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            District:
+                                        </strong>
+
+                                        Ernakulam
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Religion:
+                                        </strong>
+
+                                        Christian
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Marital Status:
+                                        </strong>
+
+                                        Never Married
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Education:
+                                        </strong>
+
+                                        Bachelor's Degree
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Occupation:
+                                        </strong>
+
+                                        Designer
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Indian Sign Language (ISL)
+
+                                    </p>
+
+
+                                </div>
+
+
+
+                                <!-- Actions -->
+
+                                <div class="d-grid gap-2 mt-4">
+
+                                    <a
+                                        href="view-profile.html?id=KB0002"
+                                        class="btn btn-brand">
+
+                                        View Profile
+
+                                    </a>
+
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-secondary remove-saved-btn">
+
+                                        Remove from Saved
+
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ================= PROFILE 2 ================= -->
+
+                    <div
+                        class="col-md-6 col-lg-4 saved-profile-item"
+                        data-profile-id="KB0004"
+                        data-profile-name="Fathima">
+
+
+                        <div class="saved-profile-card">
+
+
+                            <!-- Photo -->
+
+                            <div class="saved-profile-image">
+
+                                <img
+                                    src="images/profile-placeholder.png"
+                                    alt="Profile photo for Fathima"
+                                    class="img-fluid">
+
+                            </div>
+
+
+
+                            <!-- Body -->
+
+                            <div class="saved-profile-body">
+
+
+                                <div
+                                    class="d-flex
+                                           justify-content-between
+                                           align-items-start
+                                           gap-2">
+
+
+                                    <div>
+
+                                        <h2>
+                                            Fathima
+                                        </h2>
+
+
+                                        <p class="profile-number mb-2">
+
+                                            Profile ID: KB0004
+
+                                        </p>
+
+
+                                        <span class="approved-badge">
+
+                                            ✓ Approved
+
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <button
+                                        type="button"
+                                        class="remove-saved-btn"
+                                        aria-label="Remove Fathima from saved profiles"
+                                        title="Remove from Saved">
+
+                                        ♥️
+
+                                    </button>
+
+
+                                </div>
+
+
+
+                                <!-- Details -->
+
+                                <div class="saved-profile-details mt-3">
+
+
+                                    <p>
+
+                                        <strong>
+                                            Age:
+                                        </strong>
+
+                                        25 Years
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            District:
+                                        </strong>
+
+                                        Malappuram
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Religion:
+                                        </strong>
+
+                                        Muslim
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Marital Status:
+                                        </strong>
+
+                                        Never Married
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Education:
+                                        </strong>
+
+                                        Master's Degree
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Occupation:
+                                        </strong>
+
+                                        Teacher
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Indian Sign Language (ISL)
+
+                                    </p>
+
+
+                                </div>
+
+
+
+                                <!-- Actions -->
+
+                                <div class="d-grid gap-2 mt-4">
+
+                                    <a
+                                        href="view-profile.html?id=KB0004"
+                                        class="btn btn-brand">
+
+                                        View Profile
+
+                                    </a>
+
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-secondary remove-saved-btn">
+
+                                        Remove from Saved
+
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ================= PROFILE 3 ================= -->
+
+                    <div
+                        class="col-md-6 col-lg-4 saved-profile-item"
+                        data-profile-id="KB0010"
+                        data-profile-name="Meera">
+
+
+                        <div class="saved-profile-card">
+
+
+                            <!-- Photo -->
+
+                            <div class="saved-profile-image">
+
+                                <img
+                                    src="images/profile-placeholder.png"
+                                    alt="Profile photo for Meera"
+                                    class="img-fluid">
+
+                            </div>
+
+
+
+                            <!-- Body -->
+
+                            <div class="saved-profile-body">
+
+
+                                <div
+                                    class="d-flex
+                                           justify-content-between
+                                           align-items-start
+                                           gap-2">
+
+
+                                    <div>
+
+                                        <h2>
+                                            Meera
+                                        </h2>
+
+
+                                        <p class="profile-number mb-2">
+
+                                            Profile ID: KB0010
+
+                                        </p>
+
+
+                                        <span class="approved-badge">
+
+                                            ✓ Approved
+
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <button
+                                        type="button"
+                                        class="remove-saved-btn"
+                                        aria-label="Remove Meera from saved profiles"
+                                        title="Remove from Saved">
+
+                                        ♥️
+
+                                    </button>
+
+
+                                </div>
+
+
+
+                                <!-- Details -->
+
+                                <div class="saved-profile-details mt-3">
+
+
+                                    <p>
+
+                                        <strong>
+                                            Age:
+                                        </strong>
+
+                                        25 Years
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            District:
+                                        </strong>
+
+                                        Thrissur
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Religion:
+                                        </strong>
+
+                                        Hindu
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Marital Status:
+                                        </strong>
+
+                                        Never Married
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Education:
+                                        </strong>
+
+                                        Bachelor's Degree
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Occupation:
+                                        </strong>
+
+                                        Accountant
+
+                                    </p>
+
+
+                                    <p>
+
+                                        <strong>
+                                            Communication Method:
+                                        </strong>
+
+                                        Indian Sign Language (ISL)
+
+                                    </p>
+
+
+                                </div>
+
+
+
+                                <!-- Actions -->
+
+                                <div class="d-grid gap-2 mt-4">
+
+                                    <a
+                                        href="view-profile.html?id=KB0010"
+                                        class="btn btn-brand">
+
+                                        View Profile
+
+                                    </a>
+
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-secondary remove-saved-btn">
+
+                                        Remove from Saved
+
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     EMPTY STATE
+                =================================================== -->
+
+                <div
+                    id="savedProfilesEmpty"
+                    class="saved-empty-state d-none">
+
+
+                    <div class="saved-empty-icon">
+
+                        ♡
+
+                    </div>
+
+
+                    <h2>
+                        No Saved Profiles
+                    </h2>
+
+
+                    <p>
+
+                        When you save a profile,
+                        it will appear here.
+
+                    </p>
+
+
+                    <a
+                        href="search.html"
+                        class="btn btn-brand">
+
+                        Search Profiles
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+
+                KaiBandham — Accessible Matrimony for the Deaf Community in Kerala
+
+            </p>
+
+
+            <p class="mb-0">
+
+                &copy; 2026 KaiBandham.
+                All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

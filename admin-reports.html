@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Review reports submitted by KaiBandham members.">
+
+    <title>Reports | KaiBandham Admin</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= ADMIN NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container-fluid px-4">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="admin-dashboard.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+
+            <!-- Mobile Navigation -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#adminNavbar"
+                aria-controls="adminNavbar"
+                aria-expanded="false"
+                aria-label="Open admin navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="adminNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-dashboard.html">
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-users.html">
+
+                            Users
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="admin-reports.html">
+
+                            Reports
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-complaints.html">
+
+                            Complaints
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-content.html">
+
+                            Content
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a class="btn btn-outline-danger"
+                           href="login.html">
+
+                            Logout
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="admin-reports-section py-5">
+
+            <div class="container-fluid px-4">
+
+
+                <!-- ================= HEADING ================= -->
+
+                <div class="d-flex
+                            justify-content-between
+                            align-items-center
+                            flex-wrap
+                            gap-3
+                            mb-4">
+
+                    <div>
+
+                        <h1>
+                            Report Management
+                        </h1>
+
+                        <p class="text-muted mb-0">
+
+                            Review safety reports submitted
+                            by KaiBandham members.
+
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="admin-dashboard.html"
+                        class="btn btn-outline-secondary">
+
+                        ← Back to Dashboard
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- ================= IMPORTANT RULE ================= -->
+
+                <div class="alert alert-light border mb-4"
+                     role="note">
+
+                    <h2 class="h6 fw-bold">
+                        🛡️ Admin Review Rule
+                    </h2>
+
+                    <p class="mb-2">
+
+                        A report does not automatically mean
+                        the reported member has done something wrong.
+
+                        Admin must review the report before
+                        taking account action.
+
+                    </p>
+
+                    <ul class="mb-0">
+
+                        <li>
+                            Reports do not automatically suspend accounts.
+                        </li>
+
+                        <li>
+                            Multiple reports do not automatically
+                            create punishment.
+                        </li>
+
+                        <li>
+                            Blocking a contact does not create
+                            an admin report.
+                        </li>
+
+                        <li>
+                            If no violation is found, close the
+                            report without account punishment.
+                        </li>
+
+                        <li>
+                            Warning, suspension or removal should
+                            only be used after admin review.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- ================= FILTERS ================= -->
+
+                <div class="admin-card mb-4">
+
+                    <div class="row g-3">
+
+
+                        <!-- Search -->
+
+                        <div class="col-md-4">
+
+                            <label
+                                for="reportSearch"
+                                class="form-label">
+
+                                Search
+
+                            </label>
+
+                            <input
+                                type="search"
+                                id="reportSearch"
+                                class="form-control"
+                                placeholder="Report ID or Profile ID">
+
+                        </div>
+
+
+
+                        <!-- Status -->
+
+                        <div class="col-md-4">
+
+                            <label
+                                for="reportStatus"
+                                class="form-label">
+
+                                Status
+
+                            </label>
+
+                            <select
+                                id="reportStatus"
+                                class="form-select">
+
+                                <option value="all">
+                                    All Reports
+                                </option>
+
+                                <option value="pending">
+                                    Pending
+                                </option>
+
+                                <option value="review">
+                                    Under Review
+                                </option>
+
+                                <option value="resolved">
+                                    Resolved
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- Reason -->
+
+                        <div class="col-md-4">
+
+                            <label
+                                for="reportReasonFilter"
+                                class="form-label">
+
+                                Reason
+
+                            </label>
+
+                            <select
+                                id="reportReasonFilter"
+                                class="form-select">
+
+                                <option value="all">
+                                    All Reasons
+                                </option>
+
+                                <option value="fake">
+                                    Fake Profile
+                                </option>
+
+                                <option value="harassment">
+                                    Harassment
+                                </option>
+
+                                <option value="scam">
+                                    Scam / Fraud
+                                </option>
+
+                                <option value="photo">
+                                    Inappropriate Photo
+                                </option>
+
+                                <option value="information">
+                                    False Information
+                                </option>
+
+                                <option value="behaviour">
+                                    Inappropriate Behaviour
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= REPORT LIST ================= -->
+
+                <div class="admin-card">
+
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Report ID</th>
+
+                                    <th>
+                                        Reported Profile
+                                    </th>
+
+                                    <th>
+                                        Reported By
+                                    </th>
+
+                                    <th>
+                                        Reason
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="reportTableBody">
+
+
+                                <!-- ================= REPORT 1 ================= -->
+
+                                <tr
+                                    data-report-row
+                                    data-report-id="RP0012"
+                                    data-profile-id="KB0088"
+                                    data-reported-by="KB0041"
+                                    data-reason="fake"
+                                    data-status="pending">
+
+
+                                    <td>
+                                        RP0012
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="d-flex
+                                                    align-items-center
+                                                    gap-2">
+
+                                            <img
+                                                src="images/profile-placeholder.png"
+                                                alt=""
+                                                class="admin-user-photo">
+
+                                            <div>
+
+                                                <strong>
+                                                    Example User
+                                                </strong>
+
+                                                <span class="d-block text-muted">
+                                                    KB0088
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        KB0041
+                                    </td>
+
+
+                                    <td>
+                                        Fake Profile
+                                    </td>
+
+
+                                    <td>
+                                        8 Sep 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status pending">
+                                            Pending
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-brand btn-sm open-report-btn"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#reportReviewModal"
+                                            data-report-id="RP0012"
+                                            data-profile-id="KB0088"
+                                            data-profile-name="Example User"
+                                            data-profile-location="Kannur, Kerala"
+                                            data-reported-by="KB0041"
+                                            data-reason-label="Fake Profile"
+                                            data-report-date="8 September 2026"
+                                            data-status="pending"
+                                            data-comment="I believe this profile is using false information and the profile photo may belong to another person.">
+
+                                            Review
+
+                                        </button>
+
+                                    </td>
+
+
+                                </tr>
+
+
+
+                                <!-- ================= REPORT 2 ================= -->
+
+                                <tr
+                                    data-report-row
+                                    data-report-id="RP0011"
+                                    data-profile-id="KB0075"
+                                    data-reported-by="KB0028"
+                                    data-reason="harassment"
+                                    data-status="review">
+
+
+                                    <td>
+                                        RP0011
+                                    </td>
+
+
+                                    <td>
+                                        KB0075
+                                    </td>
+
+
+                                    <td>
+                                        KB0028
+                                    </td>
+
+
+                                    <td>
+                                        Harassment
+                                    </td>
+
+
+                                    <td>
+                                        7 Sep 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status review">
+                                            Under Review
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-brand btn-sm open-report-btn"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#reportReviewModal"
+                                            data-report-id="RP0011"
+                                            data-profile-id="KB0075"
+                                            data-profile-name="Profile KB0075"
+                                            data-profile-location="Kerala"
+                                            data-reported-by="KB0028"
+                                            data-reason-label="Harassment"
+                                            data-report-date="7 September 2026"
+                                            data-status="review"
+                                            data-comment="The member sent disrespectful messages after I asked them to stop.">
+
+                                            Continue Review
+
+                                        </button>
+
+                                    </td>
+
+
+                                </tr>
+
+
+
+                                <!-- ================= REPORT 3 ================= -->
+
+                                <tr
+                                    data-report-row
+                                    data-report-id="RP0010"
+                                    data-profile-id="KB0060"
+                                    data-reported-by="KB0035"
+                                    data-reason="scam"
+                                    data-status="resolved">
+
+
+                                    <td>
+                                        RP0010
+                                    </td>
+
+
+                                    <td>
+                                        KB0060
+                                    </td>
+
+
+                                    <td>
+                                        KB0035
+                                    </td>
+
+
+                                    <td>
+                                        Scam / Fraud
+                                    </td>
+
+
+                                    <td>
+                                        6 Sep 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status resolved">
+                                            Resolved
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-secondary btn-sm open-report-btn"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#reportReviewModal"
+                                            data-report-id="RP0010"
+                                            data-profile-id="KB0060"
+                                            data-profile-name="Profile KB0060"
+                                            data-profile-location="Kerala"
+                                            data-reported-by="KB0035"
+                                            data-reason-label="Scam / Fraud"
+                                            data-report-date="6 September 2026"
+                                            data-status="resolved"
+                                            data-comment="The member asked me to send money outside KaiBandham.">
+
+                                            View
+
+                                        </button>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- No Results -->
+
+                    <div
+                        id="noReportsMessage"
+                        class="alert alert-light border d-none mt-3"
+                        role="status">
+
+                        No reports match your search or filters.
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         REPORT REVIEW MODAL
+    =================================================== -->
+
+    <div
+        class="modal fade"
+        id="reportReviewModal"
+        tabindex="-1"
+        aria-labelledby="reportReviewModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+
+            <div class="modal-content">
+
+
+                <!-- Modal Header -->
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title fs-5"
+                        id="reportReviewModalLabel">
+
+                        Review Report
+
+                    </h2>
+
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+
+                <!-- Modal Body -->
+
+                <div class="modal-body">
+
+
+                    <!-- Current Status -->
+
+                    <div class="mb-4">
+
+                        <strong>
+                            Current Status:
+                        </strong>
+
+                        <span
+                            id="modalReportStatus"
+                            class="admin-status pending ms-2">
+
+                            Pending
+
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- ================= REPORT INFORMATION ================= -->
+
+                    <div class="report-detail-box mb-4">
+
+                        <h3>
+                            Report Information
+                        </h3>
+
+
+                        <div class="row">
+
+
+                            <div class="col-md-6 report-info">
+
+                                <span>
+                                    Report ID
+                                </span>
+
+                                <strong id="modalReportId">
+                                    RP0012
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 report-info">
+
+                                <span>
+                                    Reported Profile
+                                </span>
+
+                                <strong id="modalReportedProfile">
+                                    KB0088
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 report-info">
+
+                                <span>
+                                    Reported By
+                                </span>
+
+                                <strong id="modalReportedBy">
+                                    KB0041
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 report-info">
+
+                                <span>
+                                    Reason
+                                </span>
+
+                                <strong id="modalReportReason">
+                                    Fake Profile
+                                </strong>
+
+                            </div>
+
+
+                            <div class="col-md-6 report-info">
+
+                                <span>
+                                    Date
+                                </span>
+
+                                <strong id="modalReportDate">
+                                    8 September 2026
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= MEMBER REPORT ================= -->
+
+                    <div class="report-detail-box mb-4">
+
+                        <h3>
+                            Member Report
+                        </h3>
+
+
+                        <p
+                            class="mb-0"
+                            id="modalReportComment">
+
+                            Report information will appear here.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ================= REPORTED PROFILE ================= -->
+
+                    <div class="report-detail-box mb-4">
+
+                        <h3>
+                            Reported Profile
+                        </h3>
+
+
+                        <div class="d-flex
+                                    align-items-center
+                                    flex-wrap
+                                    gap-3">
+
+
+                            <img
+                                src="images/profile-placeholder.png"
+                                alt="Reported profile"
+                                class="report-profile-photo">
+
+
+                            <div>
+
+                                <strong
+                                    class="d-block"
+                                    id="modalProfileName">
+
+                                    Example User
+
+                                </strong>
+
+
+                                <span
+                                    class="text-muted d-block"
+                                    id="modalProfileId">
+
+                                    Profile ID: KB0088
+
+                                </span>
+
+
+                                <span
+                                    class="text-muted d-block"
+                                    id="modalProfileLocation">
+
+                                    Kannur, Kerala
+
+                                </span>
+
+
+                                <a
+                                    href="view-profile.html"
+                                    class="btn btn-outline-brand btn-sm mt-2">
+
+                                    Open Full Profile
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= REVIEW GUIDANCE ================= -->
+
+                    <div class="alert alert-warning"
+                         role="note">
+
+                        <strong>
+                            Before taking action:
+                        </strong>
+
+                        Review the report, profile information
+                        and available evidence.
+
+                        Do not warn, suspend or remove an account
+                        only because a report was submitted.
+
+                    </div>
+
+
+
+                    <!-- ================= ADMIN NOTES ================= -->
+
+                    <div class="mb-3">
+
+                        <label
+                            for="adminReportNotes"
+                            class="form-label">
+
+                            Admin Review Notes
+
+                        </label>
+
+
+                        <textarea
+                            id="adminReportNotes"
+                            class="form-control"
+                            rows="4"
+                            maxlength="1000"
+                            placeholder="Add the reason for your decision or account action..."></textarea>
+
+
+                        <div class="form-text">
+
+                            Add a short reason before closing
+                            the report or taking account action.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= ACTION RESULT ================= -->
+
+                    <div
+                        id="adminReportActionMessage"
+                        class="alert d-none"
+                        role="status">
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= ACTIONS ================= -->
+
+                <div class="modal-footer report-actions">
+
+
+                    <!-- Start Review -->
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-brand"
+                        id="startReviewBtn">
+
+                        Start Review
+
+                    </button>
+
+
+
+                    <!-- Close Without Violation -->
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-secondary"
+                        id="closeNoViolationBtn">
+
+                        Close — No Violation Found
+
+                    </button>
+
+
+
+                    <!-- Warn -->
+
+                    <button
+                        type="button"
+                        class="btn btn-warning"
+                        id="warnUserBtn">
+
+                        Warn Member
+
+                    </button>
+
+
+
+                    <!-- Suspend -->
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="suspendReportedUserBtn">
+
+                        Suspend Account
+
+                    </button>
+
+
+
+                    <!-- Remove -->
+
+                    <button
+                        type="button"
+                        class="btn btn-dark"
+                        id="removeReportedUserBtn">
+
+                        Remove Account
+
+                    </button>
+
+
+
+                    <!-- Resolve -->
+
+                    <button
+                        type="button"
+                        class="btn btn-success"
+                        id="resolveReportBtn">
+
+                        Mark Resolved
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+                KaiBandham Admin
+            </p>
+
+            <p class="mb-0">
+                &copy; 2026 KaiBandham. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

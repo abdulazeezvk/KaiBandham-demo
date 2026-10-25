@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="KaiBandham administrator dashboard.">
+
+    <title>Admin Dashboard | KaiBandham</title>
+
+
+    <!-- Bootstrap CSS -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+          type="image/png"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="/favicon/favicon.svg">
+
+    <link rel="shortcut icon"
+          href="/favicon/favicon.ico">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png">
+
+    <meta name="apple-mobile-web-app-title"
+          content="KaiBandham">
+
+    <link rel="manifest"
+          href="/favicon/site.webmanifest">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ACCESSIBILITY ================= -->
+
+    <a href="#main-content"
+       class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+
+
+    <!-- ================= ADMIN NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+        <div class="container-fluid px-4">
+
+
+            <!-- Logo -->
+
+            <a class="navbar-brand"
+               href="admin-dashboard.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="KaiBandham logo"
+                    class="logo">
+
+            </a>
+
+
+
+            <!-- Mobile Navigation -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#adminNavbar"
+                aria-controls="adminNavbar"
+                aria-expanded="false"
+                aria-label="Open admin navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- Navigation -->
+
+            <div class="collapse navbar-collapse"
+                 id="adminNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"
+                           href="admin-dashboard.html">
+
+                            Dashboard
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-users.html">
+
+                            Users
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-reports.html">
+
+                            Reports
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-complaints.html">
+
+                            Complaints
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link"
+                           href="admin-content.html">
+
+                            Content
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item ms-lg-3">
+
+                        <a class="btn btn-outline-danger"
+                           href="login.html">
+
+                            Logout
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <section class="admin-dashboard-section py-5">
+
+            <div class="container-fluid px-4">
+
+
+                <!-- ================= HEADING ================= -->
+
+                <div class="mb-5">
+
+                    <h1>
+                        Admin Dashboard
+                    </h1>
+
+                    <p class="text-muted mb-0">
+
+                        Manage KaiBandham members, profile approvals,
+                        reports, complaints and website content.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= STATISTICS ================= -->
+
+                <div class="row g-4 mb-5">
+
+
+                    <!-- Total Users -->
+
+                    <div class="col-md-6 col-xl">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                👥
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Total Users
+                                </span>
+
+                                <h2 id="totalUsersCount">
+                                    245
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Pending Profiles -->
+
+                    <div class="col-md-6 col-xl">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                ⏳
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Pending Approvals
+                                </span>
+
+                                <h2 id="pendingProfileCount">
+                                    2
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Active Users -->
+
+                    <div class="col-md-6 col-xl">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                ✅
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Active Users
+                                </span>
+
+                                <h2 id="activeUsersCount">
+                                    239
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Reports -->
+
+                    <div class="col-md-6 col-xl">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                ⚠️
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Reports Under Review
+                                </span>
+
+                                <h2 id="reportsReviewCount">
+                                    1
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Complaints -->
+
+                    <div class="col-md-6 col-xl">
+
+                        <div class="admin-stat-card">
+
+                            <div class="admin-stat-icon">
+                                📩
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Open Complaints
+                                </span>
+
+                                <h2 id="openComplaintCount">
+                                    2
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= QUICK ACTIONS ================= -->
+
+                <div class="admin-card mb-5">
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+
+                    <div class="row g-3">
+
+
+                        <!-- Users -->
+
+                        <div class="col-md-6 col-lg">
+
+                            <a
+                                href="admin-users.html"
+                                class="admin-action-btn">
+
+                                👥
+
+                                <span>
+                                    Manage Users
+                                </span>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- Approvals -->
+
+                        <div class="col-md-6 col-lg">
+
+                            <a
+                                href="#pendingProfiles"
+                                class="admin-action-btn">
+
+                                ✅
+
+                                <span>
+                                    Approve New Profiles
+                                </span>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- Reports -->
+
+                        <div class="col-md-6 col-lg">
+
+                            <a
+                                href="admin-reports.html"
+                                class="admin-action-btn">
+
+                                ⚠️
+
+                                <span>
+                                    Review Reports
+                                </span>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- Complaints -->
+
+                        <div class="col-md-6 col-lg">
+
+                            <a
+                                href="admin-complaints.html"
+                                class="admin-action-btn">
+
+                                📩
+
+                                <span>
+                                    Complaints
+                                </span>
+
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- Content -->
+
+                        <div class="col-md-6 col-lg">
+
+                            <a
+                                href="admin-content.html"
+                                class="admin-action-btn">
+
+                                📝
+
+                                <span>
+                                    Website Content
+                                </span>
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= APPROVAL INFORMATION ================= -->
+
+                <div class="alert alert-light border mb-4"
+                     role="note">
+
+                    <h2 class="h6 fw-bold">
+                        New Profile Approval
+                    </h2>
+
+                    <p class="mb-0">
+
+                        New profiles remain hidden until an administrator
+                        reviews them.
+
+                        Choose <strong>Approve</strong> when the profile
+                        is ready, or <strong>Changes Required</strong>
+                        when the member needs to correct information.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================= PENDING PROFILES ================= -->
+
+                <div
+                    class="admin-card mb-5"
+                    id="pendingProfiles">
+
+
+                    <div class="d-flex
+                                justify-content-between
+                                align-items-center
+                                flex-wrap
+                                gap-3
+                                mb-3">
+
+                        <div>
+
+                            <h2>
+                                Pending Profile Approvals
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Review new profiles before they become
+                                visible in KaiBandham search results.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Profile
+                                    </th>
+
+                                    <th>
+                                        District
+                                    </th>
+
+                                    <th>
+                                        Religion
+                                    </th>
+
+                                    <th>
+                                        Communication Method
+                                    </th>
+
+                                    <th>
+                                        Submitted
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+
+                            <tbody id="pendingProfileTableBody">
+
+
+                                <!-- ================= PROFILE 1 ================= -->
+
+                                <tr
+                                    data-pending-profile
+                                    data-profile-id="KB0102"
+                                    data-profile-name="Anjali"
+                                    data-status="pending">
+
+
+                                    <td>
+
+                                        <div class="d-flex
+                                                    align-items-center
+                                                    gap-3">
+
+                                            <img
+                                                src="images/profile-placeholder.png"
+                                                alt=""
+                                                class="admin-user-photo">
+
+                                            <div>
+
+                                                <strong>
+                                                    Anjali
+                                                </strong>
+
+                                                <span class="d-block text-muted">
+                                                    KB0102
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Ernakulam
+                                    </td>
+
+
+                                    <td>
+                                        Christian
+                                    </td>
+
+
+                                    <td>
+                                        Indian Sign Language (ISL)
+                                    </td>
+
+
+                                    <td>
+                                        8 Sep 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status pending profile-approval-status">
+
+                                            Pending
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="d-flex gap-2 flex-wrap">
+
+
+                                            <a
+                                                href="view-profile.html"
+                                                class="btn btn-outline-secondary btn-sm">
+
+                                                Review
+
+                                            </a>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-success btn-sm approve-profile">
+
+                                                Approve
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-warning btn-sm changes-required-profile"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#changesRequiredModal">
+
+                                                Changes Required
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+
+                                <!-- ================= PROFILE 2 ================= -->
+
+                                <tr
+                                    data-pending-profile
+                                    data-profile-id="KB0103"
+                                    data-profile-name="Rahul"
+                                    data-status="pending">
+
+
+                                    <td>
+
+                                        <div class="d-flex
+                                                    align-items-center
+                                                    gap-3">
+
+                                            <img
+                                                src="images/profile-placeholder.png"
+                                                alt=""
+                                                class="admin-user-photo">
+
+                                            <div>
+
+                                                <strong>
+                                                    Rahul
+                                                </strong>
+
+                                                <span class="d-block text-muted">
+                                                    KB0103
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Kozhikode
+                                    </td>
+
+
+                                    <td>
+                                        Hindu
+                                    </td>
+
+
+                                    <td>
+                                        Sign Language &amp; Speech
+                                    </td>
+
+
+                                    <td>
+                                        8 Sep 2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="admin-status pending profile-approval-status">
+
+                                            Pending
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="d-flex gap-2 flex-wrap">
+
+
+                                            <a
+                                                href="view-profile.html"
+                                                class="btn btn-outline-secondary btn-sm">
+
+                                                Review
+
+                                            </a>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-success btn-sm approve-profile">
+
+                                                Approve
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-warning btn-sm changes-required-profile"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#changesRequiredModal">
+
+                                                Changes Required
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- No Pending Profiles -->
+
+                    <div
+                        id="noPendingProfiles"
+                        class="alert alert-success d-none mt-3 mb-0"
+                        role="status">
+
+                        ✅ No profiles are currently waiting for approval.
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= RECENT REPORTS ================= -->
+
+                <div class="admin-card mb-5">
+
+
+                    <div class="d-flex
+                                justify-content-between
+                                align-items-center
+                                flex-wrap
+                                gap-3
+                                mb-3">
+
+
+                        <div>
+
+                            <h2>
+                                Recent Reports
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Safety reports that may need
+                                administrator attention.
+
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="admin-reports.html"
+                            class="btn btn-outline-brand">
+
+                            View All Reports
+
+                        </a>
+
+
+                    </div>
+
+
+
+                    <div class="table-responsive">
+
+                        <table class="table align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Report ID
+                                    </th>
+
+                                    <th>
+                                        Reported Profile
+                                    </th>
+
+                                    <th>
+                                        Reason
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+                                        RP0012
+                                    </td>
+
+                                    <td>
+                                        KB0088
+                                    </td>
+
+                                    <td>
+                                        Fake Profile
+                                    </td>
+
+                                    <td>
+
+                                        <span class="admin-status pending">
+                                            Pending
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <a
+                                            href="admin-reports.html"
+                                            class="btn btn-brand btn-sm">
+
+                                            Review
+
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td>
+                                        RP0011
+                                    </td>
+
+                                    <td>
+                                        KB0075
+                                    </td>
+
+                                    <td>
+                                        Harassment
+                                    </td>
+
+                                    <td>
+
+                                        <span class="admin-status review">
+                                            Under Review
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <a
+                                            href="admin-reports.html"
+                                            class="btn btn-outline-brand btn-sm">
+
+                                            Continue Review
+
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div class="alert alert-light border mb-0 mt-3">
+
+                        A report does not automatically punish a member.
+                        Account action is decided only after admin review.
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= RECENT COMPLAINTS ================= -->
+
+                <div class="admin-card mb-5">
+
+
+                    <div class="d-flex
+                                justify-content-between
+                                align-items-center
+                                flex-wrap
+                                gap-3
+                                mb-4">
+
+
+                        <div>
+
+                            <h2>
+                                Recent Support Complaints
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Support requests submitted through
+                                the KaiBandham Contact page.
+
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="admin-complaints.html"
+                            class="btn btn-outline-brand">
+
+                            View All Complaints
+
+                        </a>
+
+
+                    </div>
+
+
+
+                    <!-- Complaint 1 -->
+
+                    <div class="admin-complaint">
+
+                        <div>
+
+                            <strong>
+                                Profile photo privacy issue
+                            </strong>
+
+                            <p class="mb-1">
+
+                                User KB0041 says their profile photo
+                                privacy setting is not working correctly.
+
+                            </p>
+
+                            <small class="text-muted">
+                                Complaint ID: CP0018
+                            </small>
+
+                        </div>
+
+
+                        <a
+                            href="admin-complaints.html"
+                            class="btn btn-outline-brand">
+
+                            View Complaint
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- Complaint 2 -->
+
+                    <div class="admin-complaint">
+
+                        <div>
+
+                            <strong>
+                                WhatsApp request issue
+                            </strong>
+
+                            <p class="mb-1">
+
+                                User KB0033 cannot approve a WhatsApp
+                                request after reaching the
+                                15-message conversation limit.
+
+                            </p>
+
+                            <small class="text-muted">
+                                Complaint ID: CP0017
+                            </small>
+
+                        </div>
+
+
+                        <a
+                            href="admin-complaints.html"
+                            class="btn btn-outline-brand">
+
+                            View Complaint
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= USER MANAGEMENT ================= -->
+
+                <div class="admin-card">
+
+
+                    <div class="d-flex
+                                justify-content-between
+                                align-items-center
+                                flex-wrap
+                                gap-3">
+
+
+                        <div>
+
+                            <h2>
+                                User Management
+                            </h2>
+
+                            <p class="text-muted mb-0">
+
+                                Search members, view account status,
+                                manage suspensions and review
+                                communication information.
+
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="admin-users.html"
+                            class="btn btn-brand">
+
+                            Manage Users
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         CHANGES REQUIRED MODAL
+    =================================================== -->
+
+    <div
+        class="modal fade"
+        id="changesRequiredModal"
+        tabindex="-1"
+        aria-labelledby="changesRequiredModalLabel"
+        aria-hidden="true">
+
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+
+                <!-- Header -->
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title fs-5"
+                        id="changesRequiredModalLabel">
+
+                        Profile Changes Required
+
+                    </h2>
+
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+
+                <!-- Body -->
+
+                <div class="modal-body">
+
+
+                    <p>
+
+                        Ask the member to correct or complete
+                        their profile before approval.
+
+                    </p>
+
+
+                    <div class="border rounded p-3 mb-3">
+
+                        <strong id="changesProfileName">
+                            Member
+                        </strong>
+
+                        <span
+                            class="d-block text-muted"
+                            id="changesProfileId">
+
+                            Profile ID
+
+                        </span>
+
+                    </div>
+
+
+
+                    <label
+                        for="profileChangesReason"
+                        class="form-label">
+
+                        What needs to be changed?
+
+                    </label>
+
+
+                    <textarea
+                        id="profileChangesReason"
+                        class="form-control"
+                        rows="5"
+                        maxlength="1000"
+                        placeholder="Example: Please upload a clearer profile photo or complete the occupation information."
+                        required></textarea>
+
+
+                    <div class="form-text">
+
+                        This message can later appear on
+                        the member's profile-status.html page.
+
+                    </div>
+
+
+
+                    <div
+                        id="changesRequiredMessage"
+                        class="alert alert-warning d-none mt-3 mb-0"
+                        role="status">
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Footer -->
+
+                <div class="modal-footer">
+
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-brand"
+                        id="saveChangesRequiredBtn">
+
+                        Send Changes Required
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+                KaiBandham Admin
+            </p>
+
+            <p class="mb-0">
+                &copy; 2026 KaiBandham. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JS -->
+
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
